@@ -114,6 +114,185 @@ header{display:flex;align-items:center;gap:12px;padding:6px 10px;border-bottom:1
 .medtab .mds{margin:0}
 .card .small{font-size:13px;color:var(--muted)}
 .dprev{width:100%;border-radius:6px;margin-bottom:10px}
+#overlay.home{display:block;padding:0;background:var(--paper);backdrop-filter:none;-webkit-backdrop-filter:none;overflow:auto}
+.hub{max-width:620px;margin:0 auto;padding:14px 14px 24px;display:grid;gap:12px}
+.hub.wide{max-width:760px}
+.hubTop{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo .lg{width:44px;height:44px;border-radius:10px;background:#1C2A35 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect x='146' y='120' width='220' height='272' rx='22' fill='%23E8C51C'/%3E%3Cpath d='M276 150 L196 268 H252 L232 362 L316 238 H262 Z' fill='%231C2A35'/%3E%3C/svg%3E") center/cover;box-shadow:0 0 0 1.5px var(--line)}
+.logo b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:26px;line-height:1}
+.logo small{color:var(--muted);font-size:13px}
+.scrap{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);background:var(--panel);border-radius:999px;padding:6px 12px;font-weight:700;font-variant-numeric:tabular-nums}
+.scrap i,.rw i,.buy i{width:14px;height:14px;border-radius:50%;background:conic-gradient(#C07A3E 0 25%,#E3A36A 0 50%,#C07A3E 0 75%,#E3A36A 0);box-shadow:inset 0 0 0 3px #8B5A2B;display:inline-block;flex:none}
+.hub .prof{margin:0;background:var(--panel)}
+.bigPlay{display:flex;align-items:center;gap:14px;text-align:left;border:0;border-radius:10px;padding:16px 18px;background:var(--ink);color:var(--paper)}
+.bigPlay .si{width:30px;height:30px;flex:none}
+.bigPlay b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:24px;line-height:1.1}
+.bigPlay small{opacity:.8;font-size:13px}
+.bigPlay.alt{background:var(--panel);color:var(--ink);border:1.5px solid var(--line)}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (min-width:640px){.tiles{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.tile{display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-align:left;border:1.5px solid var(--line);background:var(--panel);border-radius:10px;padding:12px;min-height:104px;position:relative;overflow:hidden}
+.tile .si{width:26px;height:26px;margin-bottom:6px;color:var(--tc)}
+.tile::after{content:"";position:absolute;right:-18px;top:-18px;width:64px;height:64px;border-radius:50%;background:var(--tc);opacity:.12}
+.tile b{font-family:'Barlow Condensed',sans-serif;font-size:18px;line-height:1.1;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:anywhere;max-width:100%}
+.tile small{font-size:12px;color:var(--muted);line-height:1.3}
+.t1{--tc:#E8B700}.t2{--tc:#C07A3E}.t3{--tc:#40C057}.t4{--tc:#4DABF7}.t5{--tc:#9775FA}.t6{--tc:#F76707}.t7{--tc:#15AABF}.t8{--tc:#868E96}
+.si{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.backBtn{display:inline-flex;align-items:center;gap:4px;border:1.5px solid var(--line);background:var(--panel);border-radius:999px;padding:6px 14px 6px 8px;font-weight:600}
+.backBtn .si{width:18px;height:18px}
+.pgTitle{font-family:'Barlow Condensed',sans-serif;font-size:38px;line-height:1;margin:4px 0 0}
+.hub p{margin:0;line-height:1.5}
+.hub h4{font-family:'Barlow Condensed',sans-serif;font-size:18px;margin:6px 0 0}
+.tabs{display:flex;gap:6px}
+.tab{flex:1;border:1.5px solid var(--line);background:var(--panel);border-radius:8px;padding:9px;font-weight:600}
+.tab[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.shopList{display:grid;gap:8px}
+@media (min-width:700px){.shopList{grid-template-columns:1fr 1fr}}
+.shopItem{border:1.5px solid var(--line);background:var(--panel);border-radius:10px;padding:10px 12px;display:grid;gap:8px}
+.si-h{display:flex;align-items:center;gap:8px}
+.si-h canvas{width:30px;height:30px}
+.si-h b{font-family:'Barlow Condensed',sans-serif;font-size:18px}
+.tr{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center}
+.tr b{display:block;font-size:14px}
+.tr small{font-size:12px;color:var(--muted)}
+.tr .pips span{width:10px}
+.buy{display:inline-flex;align-items:center;gap:5px;border:0;border-radius:6px;background:var(--ink);color:var(--paper);padding:7px 10px;font-weight:700;min-width:70px;justify-content:center;font-variant-numeric:tabular-nums}
+.buy:disabled{background:var(--line);color:var(--muted);cursor:default}
+.chals{display:grid;gap:8px}
+@media (min-width:700px){.chals{grid-template-columns:1fr 1fr}}
+.chal{display:grid;gap:5px;text-align:left;border:1.5px solid var(--line);background:var(--panel);border-radius:10px;padding:11px 12px}
+.chal.done{border-color:var(--gold)}
+.ch-top{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.ch-top b{font-family:'Barlow Condensed',sans-serif;font-size:19px}
+.rw{display:inline-flex;align-items:center;gap:5px;font-weight:700;font-variant-numeric:tabular-nums}
+.ch-d{font-size:14px;color:var(--muted)}
+.ch-tags{display:flex;flex-wrap:wrap;gap:4px}
+.ch-tags em{font-style:normal;font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 8px;background:var(--paper)}
+.ch-tags em.ok{border-color:var(--gold);color:var(--gold);font-weight:700}
+.ch-tags.big em{font-size:13px;padding:4px 10px}
+.opts.small3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.opts.small3 .opt{display:flex;flex-direction:column;align-items:center;text-align:center}
+.opts.small3 .opt canvas{width:40px;height:40px;margin:0}
+.gain{font-weight:700;color:var(--gold);margin-bottom:10px}
+#sandbox{position:absolute;top:8px;left:8px;z-index:3;max-width:min(300px,calc(100% - 16px))}
+.sbToggle{border:1.5px solid var(--line);background:var(--panel);border-radius:6px;padding:6px 12px;font-weight:700;color:#2F9E44}
+.sbBody{margin-top:6px;background:var(--panel);border:1.5px solid var(--line);border-radius:8px;padding:10px;display:grid;gap:8px;font-size:14px;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+.sbBody select{width:100%;margin-top:4px;padding:6px;border-radius:6px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);font:inherit}
+.sbRow{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.sbRow button{flex:1;border:1.5px solid var(--line);background:var(--paper);border-radius:6px;padding:6px;font-weight:600}
+.sbRow span{font-size:13px;color:var(--muted);white-space:nowrap}
+.ck{display:flex;align-items:center;gap:4px;font-size:13px}
+/* ---- Gerätewahl ---- */
+.cats{display:flex;gap:6px;padding:0 10px 6px;overflow-x:auto;scrollbar-width:none}
+.cats::-webkit-scrollbar{display:none}
+.cat{flex:none;border:1.5px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;color:var(--muted)}
+.cat[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tw{flex:0 0 82px;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;gap:2px;padding:0 4px 6px;border:1.5px solid var(--line);background:var(--panel);border-radius:10px;overflow:hidden;position:relative}
+.tw::before{content:"";display:block;align-self:stretch;height:4px;margin:0 -4px 4px;background:var(--c)}
+.tw canvas{width:40px;height:40px;display:block}
+.tw .n{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:14px;line-height:1.15;white-space:nowrap}
+.tw .p{font-size:12px;color:var(--ink);font-weight:700;display:flex;align-items:center;gap:4px;font-variant-numeric:tabular-nums;background:var(--paper);border-radius:999px;padding:1px 8px}
+.tw[aria-pressed="true"]{border-color:var(--c);box-shadow:0 0 0 2px var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel))}
+.tw:disabled{opacity:.4;cursor:default}
+.tw.hero{--c:var(--gold)}
+#buildInfo{position:absolute;left:8px;right:8px;bottom:8px;margin:0 auto;max-width:460px;background:var(--panel);border:1.5px solid var(--line);border-left:5px solid var(--c);border-radius:10px;padding:10px 12px;display:grid;grid-template-columns:44px 1fr auto;gap:4px 10px;align-items:center;box-shadow:0 6px 22px rgba(0,0,0,.22);z-index:2}
+#buildInfo canvas{width:44px;height:44px;grid-row:span 2}
+#buildInfo b{font-family:'Barlow Condensed',sans-serif;font-size:18px}
+#buildInfo .bi-d{grid-column:2/4;font-size:13px;color:var(--muted);line-height:1.35}
+#buildInfo .bi-t{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:4px}
+#buildInfo button{border:0;background:none;color:var(--muted);font-size:18px;padding:2px 6px}
+#buildInfo:not([hidden]) ~ #abils, #buildInfo:not([hidden]) ~ #ultra{display:none}
+#hint{bottom:auto;top:10px}
+.tag{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 8px;background:var(--paper);white-space:nowrap}
+.tag.g{border-color:#2F9E44;color:#2F9E44}.tag.b{border-color:var(--accent);color:var(--accent)}.tag.o{border-color:#E8590C;color:#E8590C}
+/* ---- Ausbau-Panel ---- */
+#panel{gap:10px}
+.ptop{display:grid;grid-template-columns:48px 1fr auto;gap:10px;align-items:center}
+.pico{width:48px;height:48px;border-radius:10px;background:var(--paper);border:1.5px solid var(--line)}
+.pti h3{font-family:'Barlow Condensed',sans-serif;font-size:22px;margin:0;line-height:1.05}
+.pti .meta{font-size:13px;color:var(--muted);line-height:1.35}
+.ptags{display:flex;flex-wrap:wrap;gap:4px}
+.ptags:empty{display:none}
+.paths2{display:grid;gap:8px}
+@media (min-width:460px){.paths2{grid-template-columns:1fr 1fr}}
+.pcard{border:1.5px solid var(--line);border-radius:10px;background:var(--paper);padding:9px 10px;display:grid;gap:6px;align-content:start}
+.pc-h{display:flex;justify-content:space-between;align-items:center;gap:6px}
+.pc-h b{font-family:'Barlow Condensed',sans-serif;font-size:16px}
+.pc-cur{font-size:12px;color:var(--muted)}
+.pcard .pips span{width:14px}
+.pcard button{display:flex;justify-content:space-between;align-items:center;gap:8px;text-align:left;border:0;border-radius:8px;padding:9px 10px;background:var(--ink);color:var(--paper);min-height:52px;touch-action:manipulation}
+.pcard button .tx{display:flex;flex-direction:column;min-width:0}
+.pcard button b{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:600;line-height:1.1}
+.pcard button span span{font-size:12px;opacity:.85;line-height:1.3}
+.pcard button em{font-style:normal;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums;background:rgba(255,255,255,.15);border-radius:999px;padding:3px 8px}
+.pcard button:disabled{background:var(--line);color:var(--muted);cursor:default}
+.pcard button:not(:disabled):active{transform:scale(.98)}
+.pcard.locked{opacity:.65}
+#fuse{border:1.5px solid #2F9E44;border-radius:10px;padding:10px;display:grid;gap:8px;background:color-mix(in srgb,#40C057 10%,var(--paper))}
+#fuse p{margin:0;font-size:13px}
+#fuse button{border:0;border-radius:8px;padding:11px;background:#2F9E44;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px}
+#fuse button:disabled{background:var(--line);color:var(--muted)}
+#fuse.tip{border-style:dashed;background:none}
+.sellBtn{color:var(--danger)}
+.opt.lockd{opacity:.55;position:relative}
+.opt.lockd canvas{filter:grayscale(1)}
+.opt .lk{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--ink)}
+.opt .lk i{width:12px;height:12px;border-radius:50%;background:conic-gradient(#C07A3E 0 25%,#E3A36A 0 50%,#C07A3E 0 75%,#E3A36A 0);box-shadow:inset 0 0 0 2.5px #8B5A2B;display:inline-block}
+.opts.small3 .opt b{font-size:15px}
+.heroItem .si-h{align-items:flex-start}
+.heroItem .si-h canvas{width:44px;height:44px;flex:none}
+.heroItem .si-h span{display:grid;gap:2px}
+.heroItem small{font-size:12px;color:var(--muted);line-height:1.35}
+.heroItem .hu{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center}
+.heroItem .hu span{display:grid;gap:2px}
+.heroItem .hu b{font-size:14px}
+.heroItem .owned{font-size:12px;font-weight:700;color:#2F9E44;border:1.5px solid #2F9E44;border-radius:999px;padding:4px 10px;white-space:nowrap}
+.heroItem.own{border-color:#2F9E44}
+.heroItem .hc{font-size:12px}
+.t9{--tc:#F59F00}
+.tile .badge{position:absolute;top:10px;right:10px;background:var(--danger);color:#fff;font-weight:700;font-size:12px;border-radius:999px;min-width:22px;height:22px;display:grid;place-items:center;z-index:1}
+#winPop{position:absolute;inset:0;z-index:6;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(10,16,22,.55);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.winCard{position:relative;overflow:hidden;background:var(--panel);border:1.5px solid var(--gold);border-radius:14px;padding:22px 18px 18px;max-width:400px;width:100%;text-align:center;display:grid;gap:10px;animation:pop .35s ease-out}
+.winCard h2{font-family:'Barlow Condensed',sans-serif;font-size:38px;margin:0;line-height:1;position:relative}
+.winCard p{margin:0;position:relative}
+.winCard .menu{position:relative}
+.burst{position:absolute;inset:-40%;background:repeating-conic-gradient(color-mix(in srgb,var(--gold) 18%,transparent) 0 10deg,transparent 10deg 20deg);animation:spin 14s linear infinite;opacity:.6}
+.loot{display:flex;justify-content:center;gap:14px;position:relative;flex-wrap:wrap}
+.lootItem{display:grid;justify-items:center;gap:2px;background:var(--paper);border:1.5px solid var(--line);border-radius:10px;padding:10px 14px;min-width:110px}
+.lootItem b{font-family:'Barlow Condensed',sans-serif;font-size:22px}
+.lootItem small{font-size:12px;color:var(--muted)}
+.scrapBig i{display:block;width:34px;height:34px;border-radius:50%;background:conic-gradient(#C07A3E 0 25%,#E3A36A 0 50%,#C07A3E 0 75%,#E3A36A 0);box-shadow:inset 0 0 0 6px #8B5A2B}
+.boxIco{display:block;width:40px;height:34px;border-radius:5px;background:linear-gradient(var(--bc) 0 38%,rgba(0,0,0,.25) 38% 44%,var(--bc) 44%);box-shadow:inset 0 0 0 2px rgba(0,0,0,.25);position:relative}
+.boxIco::after{content:"";position:absolute;left:50%;top:30%;width:8px;height:10px;margin-left:-4px;background:#F2C200;border-radius:2px;box-shadow:0 0 0 1.5px rgba(0,0,0,.3)}
+.boxIco.big{width:96px;height:80px;border-radius:10px}
+.boxIco.big::after{width:18px;height:22px;margin-left:-9px}
+.r-normal{--bc:#868E96}.r-selten{--bc:#339AF0}.r-episch{--bc:#9775FA}
+.boxGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.boxCard{display:grid;justify-items:center;gap:4px;text-align:center;border:1.5px solid var(--bc);background:color-mix(in srgb,var(--bc) 10%,var(--panel));border-radius:10px;padding:12px 8px}
+.boxCard b{font-family:'Barlow Condensed',sans-serif;font-size:15px;line-height:1.1;hyphens:auto;overflow-wrap:anywhere}
+.boxCard small{font-size:12px;color:var(--muted)}
+.boxCard em{font-style:normal;font-weight:700;font-size:18px}
+.boxCard .primary{width:100%;font-size:16px;padding:8px}
+.opening{display:grid;place-items:center;padding:20px}
+.shake{animation:shake .15s linear infinite}
+.lootGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+@media (min-width:560px){.lootGrid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.lootCard{display:grid;justify-items:center;gap:4px;text-align:center;border:1.5px solid var(--line);background:var(--panel);border-radius:10px;padding:12px 8px;animation:pop .4s ease-out both}
+.lootCard.rare{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold)}
+.lootCard canvas{width:40px;height:40px}
+.lootCard b{font-family:'Barlow Condensed',sans-serif;font-size:16px;line-height:1.15}
+.lootCard small{font-size:12px;color:var(--muted)}
+.xpIco{width:36px;height:36px;border-radius:50%;background:var(--gold);color:#1C2A35;font-weight:800;display:grid;place-items:center;font-size:13px}
+@keyframes pop{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes shake{0%,100%{transform:rotate(0)}25%{transform:rotate(-8deg) translateY(-2px)}75%{transform:rotate(8deg) translateY(-2px)}}
+@media (prefers-reduced-motion:reduce){.burst,.shake,.winCard,.lootCard{animation:none}}
+.mapRw{display:flex;flex-wrap:wrap;align-items:center;gap:4px;font-size:12px;color:var(--muted);margin-top:4px;line-height:1.3}
+.mapRw em{font-style:normal;display:inline-flex;align-items:center;gap:4px;font-weight:700;font-size:13px;color:var(--ink)}
+.mapRw small{display:block;width:100%;font-size:12px}
+.mapRw i,.dRw i{width:12px;height:12px;border-radius:50%;background:conic-gradient(#C07A3E 0 25%,#E3A36A 0 50%,#C07A3E 0 75%,#E3A36A 0);box-shadow:inset 0 0 0 2.5px #8B5A2B;display:inline-block;flex:none}
+.dRw{display:inline-flex;align-items:center;gap:4px;font-weight:700;color:var(--ink)!important;font-size:13px!important;margin-top:2px}
 @media (max-width:380px){.stats{gap:10px}.stat b{font-size:20px}}
 #stage{flex:1;position:relative;min-height:0;overflow:hidden}
 #c{position:absolute;inset:0;width:100%;height:100%;touch-action:none;display:block}
@@ -128,7 +307,7 @@ header{display:flex;align-items:center;gap:12px;padding:6px 10px;border-bottom:1
 #bar{border-top:1.5px solid var(--line);padding:8px 0 10px}
 .towers{display:flex;gap:6px;overflow-x:auto;padding:0 10px 6px;scroll-snap-type:x proximity;scrollbar-width:none}
 .towers::-webkit-scrollbar{display:none}
-.tw{flex:0 0 76px;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;gap:1px;padding:6px 4px 5px;border:1.5px solid var(--line);background:var(--panel);border-radius:6px}
+/*old*/.tw-old{flex:0 0 76px;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;gap:1px;padding:6px 4px 5px;border:1.5px solid var(--line);background:var(--panel);border-radius:6px}
 .tw canvas{width:34px;height:34px;display:block}
 .tw.hero{border-color:var(--gold);background:color-mix(in srgb,var(--gold) 12%,var(--panel))}
 #ultra{position:absolute;right:10px;bottom:10px;width:68px;height:68px;border-radius:50%;border:0;padding:0;background:conic-gradient(var(--gold) var(--p,100%),var(--line) 0);display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.25)}
@@ -210,10 +389,13 @@ header{display:flex;align-items:center;gap:12px;padding:6px 10px;border-bottom:1
     <div id="bossbar" hidden><div class="bn"><span id="bossName"></span><span id="bossPct"></span></div><div class="track"><div class="fill" id="bossFill"></div></div></div>
     <div id="toast" role="status"></div>
     <div id="hint" hidden>Nochmal tippen zum Bauen</div>
+    <div id="buildInfo" hidden></div>
+    <div id="sandbox" hidden></div>
     <div id="abils"></div>
     <button id="ultra" hidden aria-label="Ultra auslösen"><span class="in"><b>Ultra</b><span id="ultraT">Bereit</span></span></button>
   </div>
   <footer id="bar">
+    <div class="cats" id="cats"></div>
     <div class="towers" id="towers"></div>
     <div class="goRow">
       <button id="auto" class="toggle" aria-pressed="false">Auto</button>
@@ -221,11 +403,13 @@ header{display:flex;align-items:center;gap:12px;padding:6px 10px;border-bottom:1
     </div>
   </footer>
   <div id="panel" hidden>
-    <div class="top"><h3 id="pName"></h3><button class="chip" id="prio"></button><button class="chip" id="pClose" aria-label="Schließen">✕</button></div>
-    <div class="meta" id="pMeta"></div>
-    <div id="paths" style="display:grid;gap:8px"></div>
-    <div class="bottom"><button class="chip" id="sell"></button></div>
+    <div class="ptop"><canvas id="pIco" class="pico"></canvas><div class="pti"><h3 id="pName"></h3><div class="meta" id="pMeta"></div></div><button class="chip" id="pClose" aria-label="Schließen">✕</button></div>
+    <div id="pTags" class="ptags"></div>
+    <div id="paths" class="paths2"></div>
+    <div id="fuse" hidden></div>
+    <div class="bottom"><button class="chip" id="prio"></button><button class="chip sellBtn" id="sell"></button></div>
   </div>
+  <div id="winPop" hidden></div>
   <div id="overlay"></div>
 </div>
 <script>
@@ -308,7 +492,10 @@ const TOWERS = {
     paths:[{n:'Leistung',u:[U('Großes Netz',400,'Größerer Wirkbereich',{range:.6}),U('Taktgeber',1200,'Geräte schießen 15 % schneller',{bCdMul:.85}),U('Leistungstrafo',3000,'Geräte machen +1 Schaden',{bDmg:1}),U('Umspannwerk',12000,'Noch schneller, +2 Schaden',{bCdMul:.75,bDmg:2})]},
            {n:'Leitstelle',u:[U('Radar',500,'Geräte sehen Getarnte',{bCamo:true}),U('Schirmung',1500,'Geräte treffen Isolierte',{bIso:true}),U('Einspeisung',2500,'+200 Kupfer pro Welle',{income:200}),U('Netzleitstelle',10000,'Geräte viel schneller, +1 Schaden',{bCdMul:.7,bDmg:1})]}]}
 };
-const KEYS = Object.keys(TOWERS);
+TOWERS.akw={n:'AKW',full:'Atomkraftwerk',cost:12000,col:0x51CF66,special:true,desc:'Fusion aus 2 Windrädern und 2 Trafos. Riesiger Ertrag, verstärkt alle Geräte in großem Umkreis und sendet Strahlungspulse aus.',
+  base:{kind:'akw',range:3.4,cd:2.2,dmg:20,vsBig:2,iso:true,camo:true,income:2500,bRange:1.15,bCd:.8,bDmg:2,bCamo:true,bIso:true},paths:[]};
+const KEYS = Object.keys(TOWERS).filter(k=>!TOWERS[k].special);
+const tcx=t=>t.x+(t.sz||1)/2, tcy=t=>t.y+(t.sz||1)/2;
 const MAPS = {
   werkhalle:{n:'Werkhalle',d:'Die klassische Schlangenleitung.',lvl:'Anfänger',theme:'halle',obst:5,paths:[[[-1,1],[3,1],[3,6],[7,6],[7,2],[11,2],[11,7],[13,7]]]},
   spirale:{n:'Spirale',d:'Lange Leitung über eine Wiese.',lvl:'Anfänger',theme:'wiese',obst:6,paths:[[[-1,0],[12,0],[12,8],[1,8],[1,2],[10,2],[10,6],[4,6]]]},
@@ -322,10 +509,10 @@ const MAPS = {
   solar:{n:'Solarfeld',d:'Drei Eingänge in der Wüste.',lvl:'Experte',theme:'wueste',obst:8,paths:[[[-1,1],[6,1],[6,4],[13,4]],[[-1,7],[6,7],[6,4],[13,4]],[[6,-1],[6,4],[13,4]]]}
 };
 const DIFFS = {
-  leicht:{n:'Leicht',money:850,lives:200,price:.85,sp:.9,hp:.85},
-  normal:{n:'Normal',money:650,lives:150,price:1,sp:1,hp:1},
-  schwer:{n:'Schwer',money:650,lives:100,price:1.08,sp:1.08,hp:1.15},
-  unmoeglich:{n:'Unmöglich',money:650,lives:1,price:1.2,sp:1.1,hp:1.3}
+  leicht:{n:'Leicht',money:850,lives:200,price:.85,sp:.9,hp:.85,goal:40,scrap:10,box:.25,boxR:['normal']},
+  normal:{n:'Normal',money:650,lives:150,price:1,sp:1,hp:1,goal:50,scrap:20,box:.4,boxR:['normal','normal','selten']},
+  schwer:{n:'Schwer',money:650,lives:100,price:1.08,sp:1.08,hp:1.15,goal:80,scrap:50,box:.7,boxR:['selten','selten','episch']},
+  unmoeglich:{n:'Unmöglich',money:650,lives:1,price:1.2,sp:1.1,hp:1.3,goal:120,scrap:80,box:1,boxR:['episch']}
 };
 const HEROES = {
   elektriker:{n:'Elektriker',full:'Der Elektriker',cost:700,suit:0x1F4E8C,hat:0xF2C200,vest:0xFF922B,bolt:0xFFE066,
@@ -333,8 +520,24 @@ const HEROES = {
   meisterin:{n:'Meisterin',full:'Die Netzmeisterin',cost:900,suit:0x862E9C,hat:0xF8F9FA,vest:0x40C057,bolt:0xD0BFFF,
     desc:'Schneller Messimpuls. Geräte in ihrer Nähe schießen schneller.',ultra:'Überlast',ultraD:'Alle Geräte schießen eine Zeit lang doppelt so schnell.'},
   azubi:{n:'Azubi',full:'Der Azubi',cost:450,suit:0x495057,hat:0x40C057,vest:0xFAB005,bolt:0x8CE99A,
-    desc:'Günstig, wirft Kabelbinder und lernt schnell.',ultra:'Kabelsalat',ultraD:'Alle Gegner verheddern sich, werden stark gebremst und nehmen Schaden.'}
+    desc:'Günstig, wirft Kabelbinder und lernt schnell.',ultra:'Kabelsalat',ultraD:'Alle Gegner verheddern sich, werden stark gebremst und nehmen Schaden.'},
+  praktikant:{n:'Praktikant',full:'Der Praktikant',cost:250,unlock:30,suit:0x74C0FC,hat:0xFFFFFF,vest:0xFF8787,bolt:0xFFD8A8,atk:'Büroklammern',
+    desc:'Spottbillig, wirft Büroklammern und lernt doppelt so schnell.',ultra:'Kaffee für alle',ultraD:'Alle Geräte schießen kurz 50 % schneller und es gibt Kupfer.'},
+  altgeselle:{n:'Altgeselle',full:'Der Altgeselle',cost:800,unlock:50,suit:0x5C3D2E,hat:0xADB5BD,vest:0xE8590C,bolt:0xFFA94D,atk:'Hammerschlag',
+    desc:'Langsam, aber jeder Treffer sitzt. Trifft Isolierte, stark gegen große Gegner.',ultra:'Alte Schule',ultraD:'Ein gewaltiger Schlag auf den stärksten Gegner.'},
+  schweisserin:{n:'Schweißerin',full:'Die Schweißerin',cost:750,unlock:60,suit:0x343A40,hat:0x343A40,vest:0xF76707,bolt:0xFF922B,atk:'Schweißflamme',
+    desc:'Brennt alles in ihrer Nähe weg und trifft Isolierte.',ultra:'Lichtbogen',ultraD:'Alle Gegner auf der Karte fangen an zu brennen.'},
+  pruefer:{n:'Prüferin',full:'Die Prüferin',cost:850,unlock:70,suit:0x1098AD,hat:0xF8F9FA,vest:0xFFD43B,bolt:0x66D9E8,atk:'Messstrahl',
+    desc:'Durchschlagender Messstrahl. Geräte in ihrer Nähe sehen Getarnte.',ultra:'Isolationsmessung',ultraD:'Entfernt bei allen Gegnern Tarnung, Isolierung, Panzerung und Heilung.'},
+  kran:{n:'Kranführer',full:'Der Kranführer',cost:900,unlock:80,suit:0xE67700,hat:0xFAB005,vest:0x343A40,bolt:0xFFE066,atk:'Lastabwurf',
+    desc:'Lässt schwere Lasten fallen, großer Flächenschaden.',ultra:'Container',ultraD:'Ein riesiger Container fällt auf die dichteste Gegnergruppe.'},
+  chef:{n:'Chef',full:'Der Chef',cost:1200,unlock:100,suit:0x212529,hat:0xE03131,vest:0xF8F9FA,bolt:0xFF6B6B,atk:'Anpfiff',
+    desc:'Schwacher Anpfiff, aber mehr Kupfer am Wellenende und Geräte in der Nähe machen mehr Schaden.',ultra:'Machtwort',ultraD:'Alle Gegner erstarren und es gibt eine Prämie.'},
+  ingenieurin:{n:'Ingenieurin',full:'Die Ingenieurin',cost:1100,unlock:120,suit:0xF8F9FA,hat:0x4C6EF5,vest:0x4C6EF5,bolt:0x91A7FF,atk:'Plasmabogen',
+    desc:'Kettenblitze. Geräte in ihrer Nähe bekommen mehr Reichweite.',ultra:'Optimierung',ultraD:'Alle Fähigkeiten sind sofort wieder bereit und alle Geräte schießen kurz schneller.'}
 };
+const FREE_HEROES=['elektriker','meisterin','azubi'];
+const heroUnlocked=k=>!HEROES[k].unlock||!!(PROF.heroes&&PROF.heroes[k]);
 const ABIL = {
   funke:{n:'Funkenregen',cd:45,d:'Alle Funken schießen 6 Sekunden lang dreimal so schnell.'},
   tesla:{n:'Blitzsturm',cd:50,d:'30 Blitze schlagen in zufällige Gegner ein.'},
@@ -347,6 +550,7 @@ const ABIL = {
   kuehl:{n:'Eiszeit',cd:55,d:'Friert alle Gegner auf der Karte ein.'},
   drohne:{n:'Luftschlag',cd:45,d:'Bomben auf die stärksten Gegner.'},
   schiene:{n:'Durchschuss',cd:60,d:'300 Schaden an allen Gegnern auf den Leitungen.'},
+  akw:{n:'Kernschmelze',cd:90,d:'2.000 Schaden an allen Gegnern auf der Karte.'},
   trafo:{n:'Netzboost',cd:60,d:'Alle Geräte schießen 10 Sekunden lang doppelt so schnell.'}
 };
 let curMap='werkhalle', curDiff='normal', curHero='elektriker';
@@ -364,16 +568,30 @@ const PERKS = {
 };
 const PROF_KEY='netzschutz3d-profile';
 let PROF=(()=>{ try{ return JSON.parse(localStorage.getItem(PROF_KEY)||'null'); }catch(e){ return null; } })()||{};
-PROF=Object.assign({xp:0,perks:{},stats:{},ach:{},daily:{},heroMax:{}},PROF);
+PROF=Object.assign({xp:0,perks:{},stats:{},ach:{},daily:{},heroMax:{},scrap:0,shop:{},chal:{},boxes:[]},PROF);
 function saveProf(){ try{ localStorage.setItem(PROF_KEY,JSON.stringify(PROF)); }catch(e){} }
 const perk=k=>(PROF.perks[k]||0);
 function levelInfo(){ let L=1, need=400, x=PROF.xp; while(x>=need){ x-=need; L++; need=400+L*120; } return {L,cur:x,need}; }
 function freePoints(){ const used=Object.values(PROF.perks).reduce((a,b)=>a+b,0); return levelInfo().L-1-used; }
 const RANKS=[[1,'Azubi'],[5,'Geselle'],[10,'Vorarbeiter'],[15,'Meister'],[20,'Techniker'],[30,'Ingenieur'],[40,'Netzlegende']];
 const rankName=L=>RANKS.filter(r=>L>=r[0]).pop()[1];
-let DAILY=null; // aktive Tagesaufgabe
+let MODE=null; // Sondermodus: Tagesaufgabe, Herausforderung oder Sandbox
+const M=(k,d)=>(MODE&&MODE[k]!==undefined)?MODE[k]:d;
+/* Werkstatt (dauerhafte Verbesserungen gegen Kabelreste) */
+const SHOP_TRACKS=[['dmg','Leistung','+10 % Schaden'],['range','Reichweite','+5 % Reichweite'],['speed','Takt','5 % schneller']];
+const SHOP_GENERAL={
+  geld:{n:'Startkapital',d:'+150 Kupfer zu Spielbeginn',max:5},
+  netz:{n:'Verstärkte Leitung',d:'+25 Netz zu Spielbeginn',max:5},
+  bonus:{n:'Prämie',d:'+5 % Wellenbonus',max:5},
+  rabatt:{n:'Großhändler',d:'Alles 2 % günstiger',max:5},
+  held:{n:'Heldentraining',d:'Held macht 10 % mehr Schaden',max:5},
+  ultra:{n:'Ultra-Akku',d:'Ultra lädt 5 % schneller',max:5},
+  rest:{n:'Recycling',d:'+10 % Kabelreste',max:5}
+};
+const shopLv=k=>(PROF.shop&&PROF.shop[k])||0;
+const shopCost=(lv,base)=>Math.round((base||3)*Math.pow(lv+1,1.45));
 function setHero(id){ const h=HEROES[id]; curHero=id; Object.assign(TOWERS.held,{n:h.n,full:h.full,cost:h.cost,desc:h.desc,col:h.hat}); }
-const price = c => Math.round(c*DIFFS[curDiff].price*(1-.03*perk('preis'))/5)*5;
+const price = c => Math.round(c*DIFFS[curDiff].price*(1-.03*perk('preis'))*(1-.02*shopLv('g.rabatt'))*M('priceMul',1)/5)*5;
 const costOf = type => price(TOWERS[type].cost);
 const PRIO = [['first','Erster'],['last','Letzter'],['strong','Stärkster'],['close','Nächster']];
 
@@ -388,22 +606,38 @@ function applyMod(s,m){
 const HERO_XP=[0,150,400,800,1400,2200,3200,4500,6100,8000];
 const HERO_DMG=[2,2,3,4,5,6,8,10,13,18];
 function heroStats(L){
+  const D=HERO_DMG[L-1];
+  switch(curHero){
+    case 'praktikant': return {kind:'heroDart',vsBig:1,range:2.2+L*.06,cd:.7-L*.03,dmg:Math.max(1,Math.round(D*.5)),pierce:1+Math.floor(L/3),multi:L>=6?2:1,speed:10,camo:L>=6,iso:L>=8};
+    case 'altgeselle': return {kind:'snipe',vsBig:L>=5?3:2,range:3+L*.08,cd:1.7-L*.06,dmg:D*4,iso:true,camo:L>=4};
+    case 'schweisserin': return {kind:'flame',vsBig:1,range:1.5+L*.05,dps:2+L*1.6,pierce:6+L,iso:true,camo:L>=5};
+    case 'pruefer': return {kind:'rail',vsBig:1,range:99,cd:1.4-L*.05,dmg:D*1.2,pierce:4+L,iso:L>=3,camo:true,aura:2.4+L*.05,bRange:1,bCd:1,bDmg:0,bCamo:true,bIso:L>=6};
+    case 'kran': return {kind:'bomb',vsBig:L>=6?2:1,range:2.6+L*.08,cd:2-L*.07,dmg:D*1.5,splash:1+L*.06,pierce:20+L*3,speed:6,iso:true,camo:L>=5};
+    case 'chef': return {kind:'chain',vsBig:1,range:2.2+L*.06,cd:1.2-L*.04,dmg:Math.max(1,Math.round(D*.5)),chain:2+Math.floor(L/2),chainR:1.4,camo:L>=4,iso:L>=7,aura:2.2+L*.05,bRange:1,bCd:1,bDmg:L>=8?2:1,income:0};
+    case 'ingenieurin': return {kind:'chain',vsBig:1,range:2.4+L*.07,cd:1-L*.04,dmg:Math.max(1,Math.round(D*.8)),chain:3+L,chainR:1.5,camo:L>=4,iso:L>=5,aura:2.3+L*.05,bRange:1.1+L*.01,bCd:L>=6?.92:1,bDmg:0};
+  }
   if(curHero==='meisterin') return {kind:'hero',vsBig:L>=8?2:1,range:2.7+L*.08,cd:.45-L*.02,dmg:Math.max(1,Math.round(HERO_DMG[L-1]*.6)),splash:0,pierce:1,camo:L>=3,iso:L>=5,bRange:1,bCd:.92-L*.012,bDmg:L>=7?1:0,aura:2.2+L*.05};
   if(curHero==='azubi') return {kind:'heroDart',vsBig:1,range:2.4+L*.07,cd:.8-L*.035,dmg:Math.max(1,Math.round(HERO_DMG[L-1]*.7)),pierce:2+Math.floor(L/2),multi:L>=5?3:L>=2?2:1,speed:11,camo:L>=5,iso:L>=7};
   return {kind:'hero',vsBig:L>=8?2:1,range:2.5+L*.08,cd:.95-L*.045,dmg:HERO_DMG[L-1],splash:.45+L*.03,pierce:3+L,camo:L>=4,iso:L>=6};
 }
-const ultraDmg=L=>Math.round((curHero==='azubi'?3:curHero==='meisterin'?0:8)*Math.pow(L,1.7));
-const ultraCd=L=>((curHero==='azubi'?45:curHero==='meisterin'?60:50)-L*2)*(1-.1*perk('ultra'));
-const ultraDur=L=>curHero==='meisterin'?6+L*.4:5+L*.3;
+const ULT_BASE={elektriker:[8,50],meisterin:[0,60],azubi:[3,45],praktikant:[0,40],altgeselle:[60,45],schweisserin:[4,50],pruefer:[0,55],kran:[30,50],chef:[0,60],ingenieurin:[0,70]};
+const ultraDmg=L=>Math.round((ULT_BASE[curHero]||[8])[0]*Math.pow(L,1.7));
+const ultraCd=L=>(((ULT_BASE[curHero]||[0,50])[1])-L*2)*(1-.1*perk('ultra'))*(1-.05*shopLv('g.ultra'));
+const ultraDur=L=>curHero==='meisterin'?6+L*.4:curHero==='praktikant'?4+L*.3:curHero==='schweisserin'?5+L*.4:5+L*.3;
 function ownStats(t){
   const d=TOWERS[t.type];
-  if(d.hero) return heroStats(t.hlv);
+  if(d.hero){ const h=heroStats(t.hlv); const m=1+.1*shopLv('g.held'); if(h.dmg) h.dmg*=m; if(h.range<50) h.range*=M('rangeMul',1); return h; }
   const s=Object.assign({vsBig:1},d.base);
   for(let p=0;p<2;p++) for(let i=0;i<t.lv[p];i++) applyMod(s,d.paths[p].u[i].m);
+  const dm=1+.1*shopLv(t.type+'.dmg'), rm=(1+.05*shopLv(t.type+'.range'))*M('rangeMul',1), cm=Math.pow(.95,shopLv(t.type+'.speed'));
+  if(s.dmg) s.dmg*=dm; if(s.dps) s.dps*=dm; if(s.income) s.income*=dm; if(s.stun) s.stun*=dm; if(s.slow) s.slow=Math.min(.8,s.slow*(1+.05*shopLv(t.type+'.dmg')));
+  if(s.range>0&&s.range<50) s.range*=rm;
+  if(s.bRange) s.bRange*=1+.02*shopLv(t.type+'.dmg');
+  if(s.cd) s.cd*=cm; if(s.bCd) s.bCd=1-(1-s.bCd)*(1+.1*shopLv(t.type+'.speed'))-.01*shopLv(t.type+'.speed');
   return s;
 }
 function canUpgrade(t,p){
-  const n=t.lv[p]+1; if(n>4) return false;
+  const n=t.lv[p]+1; if(n>4||n>M('maxTier',4)) return false;
   const other=t.lv[1-p];
   return Math.min(n,other)<=2;
 }
@@ -488,16 +722,16 @@ function newGame(){
 
 /* ================= Logik ================= */
 function recalc(){
-  const trafos=G.towers.filter(t=>t.type==='trafo');
+  const trafos=G.towers.filter(t=>t.type==='trafo'||t.type==='akw');
   trafos.forEach(t=>t.s=ownStats(t));
-  if(G.hero && curHero==='meisterin'){ const hs=ownStats(G.hero); trafos.push({x:G.hero.x,y:G.hero.y,s:{range:hs.aura,bRange:hs.bRange,bCd:hs.bCd,bDmg:hs.bDmg,bCamo:false,bIso:false}}); }
+  if(G.hero && ownStats(G.hero).aura){ const hs=ownStats(G.hero); trafos.push({x:G.hero.x,y:G.hero.y,s:{range:hs.aura,bRange:hs.bRange||1,bCd:hs.bCd||1,bDmg:hs.bDmg||0,bCamo:!!hs.bCamo,bIso:!!hs.bIso}}); }
   for(const t of G.towers){
-    if(t.type==='trafo') continue;
+    if(t.type==='trafo'||t.type==='akw') continue;
     const s=ownStats(t);
     if(t.type==='held'){ t.s=s; continue; }
     let rM=1,cM=1,dA=0,camo=false,iso=false;
     for(const tr of trafos){
-      const dx=tr.x-t.x, dy=tr.y-t.y;
+      const dx=tcx(tr)-tcx(t), dy=tcy(tr)-tcy(t);
       if(dx*dx+dy*dy<=tr.s.range*tr.s.range){
         rM=Math.max(rM,tr.s.bRange); cM=Math.min(cM,tr.s.bCd); dA=Math.max(dA,tr.s.bDmg);
         camo=camo||tr.s.bCamo; iso=iso||tr.s.bIso;
@@ -520,10 +754,10 @@ function spawnEnemy(k,dist,camo,pi,mods){
   const D=DIFFS[curDiff];
   let hp=d.hp*(d.scale?hpScale(w)*D.hp:1);
   if(d.boss) hp=Math.round(1800*Math.pow(w/40,3)*D.hp);
-  const fort=!!mods.fort&&(d.scale||k==='keramik'), regen=!!mods.regen&&!d.boss;
+  const fort=!!mods.fort&&(d.scale||k==='keramik'), regen=(!!mods.regen||M('regenAll',false))&&!d.boss;
   if(fort) hp*=2;
-  if(DAILY&&DAILY.mod==='tank') hp*=d.hp>1?1.3:1;
-  const e={id:uid++,k,hp,max:hp,dist,sp:d.sp*spScale(w)*D.sp*(DAILY&&DAILY.mod==='fast'?1.25:1),pi,camo:!!camo&&!d.big,iso:!!d.iso,big:!!d.big,boss:!!d.boss,
+  hp*=M('enemyHp',1); if(d.hp>1) hp*=M('layerHp',1);
+  const e={id:uid++,k,hp,max:hp,dist,sp:d.sp*spScale(w)*D.sp*M('enemySpeed',1),pi,camo:(!!camo||M('camoAll',false))&&!d.big,iso:!!d.iso,big:!!d.big,boss:!!d.boss,
            r:d.r,rank:d.rank,fort,regen,jamT:d.jam?2:0,slowF:1,stun:0,shield:0,phase:0,x:0,y:0,dir:0,dead:false};
   [e.x,e.y]=posAt(pi,Math.max(0,dist));
   G.enemies.push(e);
@@ -554,7 +788,7 @@ function pop(e){
   if(e.dead) return;
   e.dead=true;
   const d=ENEMY[e.k];
-  G.money+=Math.round(d.rw*(DAILY&&DAILY.mod==='reich'?1.5:1));
+  G.money+=Math.round(d.rw*M('incomeMul',1));
   if(e.boss){ G.bossKills=(G.bossKills||0)+1; G.money+=Math.round(1500*G.wave/40); toast(`${e.name} besiegt! +${Math.round(1500*G.wave/40)} Kupfer`); G.boss=null; }
   (d.ch||[]).forEach((ck,i)=>spawnEnemy(ck,e.dist-i*.14,e.camo,e.pi,{fort:e.fort,regen:e.regen}));
   G.pops++; if(e.big&&perk('pop')) G.money+=1;
@@ -563,7 +797,7 @@ function pop(e){
 }
 function visible(e,s){ return !e.dead && (!e.camo||s.camo) && (!e.iso||s.iso||s.kind==='bomb'); }
 function pickTarget(t,s,ox,oy){
-  let best=null,bv=-Infinity; const cx=ox===undefined?t.x+.5:ox, cy=oy===undefined?t.y+.5:oy, r2=s.range*s.range;
+  let best=null,bv=-Infinity; const cx=ox===undefined?tcx(t):ox, cy=oy===undefined?tcy(t):oy, r2=s.range*s.range;
   for(const e of G.enemies){
     if(!visible(e,s) || e.dist<0) continue;
     const dx=e.x-cx, dy=e.y-cy, d2=dx*dx+dy*dy;
@@ -581,13 +815,20 @@ function pickTarget(t,s,ox,oy){
 }
 function heroXp(t,x){
   if(!t||t.hlv>=10) return;
-  t.xp+=x*(curHero==='azubi'?1.6:1);
+  t.xp+=x*(curHero==='azubi'?1.6:curHero==='praktikant'?2:1);
   while(t.hlv<10 && t.xp>=HERO_XP[t.hlv]){ t.hlv++; recalc(); toast(`${HEROES[curHero].full} erreicht Stufe ${t.hlv}!`); sfx('level'); if(HAS3D) fxRing(t.x+.5,t.y+.5,1.2,0xF2C200); }
 }
 function useUltra(){
-  const h=G.hero; if(!h||G.ultraCd>0||!G.running) return;
+  const h=G.hero; if(!h||G.ultraCd>0||!G.running||M('noUltra',false)) return;
   const L=h.hlv, dmg=ultraDmg(L), src={iso:true,camo:true,vsBig:1};
   if(curHero==='meisterin'){ G.overloadT=Math.max(G.overloadT,ultraDur(L)); sfx('ultra'); toast(`Überlast! Alle Geräte doppelt so schnell`); }
+  else if(curHero==='praktikant'){ G.coffeeT=ultraDur(L); const m=60*L; G.money+=m; sfx('coin'); toast(`Kaffee für alle! +${m} Kupfer`); }
+  else if(curHero==='altgeselle'){ const e=strongest(); if(e){ fxStrike(e.x,e.y); fxBoom(e.x,e.y,.8,0xFFA94D); damage(e,dmg*(e.big?2:1),src); e.stun=Math.max(e.stun,e.boss?1:2); } sfx('boom'); toast(`Alte Schule! ${dmg} Schaden`); }
+  else if(curHero==='schweisserin'){ G.burnT=Math.max(G.burnT,ultraDur(L)); G.burnDps=Math.max(G.burnDps||0,4+L*3); sfx('ultra'); toast('Lichtbogen! Alle Gegner brennen'); }
+  else if(curHero==='pruefer'){ for(const e of G.enemies){ e.camo=false; e.iso=false; e.regen=false; if(e.fort){ e.fort=false; e.hp=Math.min(e.hp,e.max/2); e.max/=2; } if(e.m) e.m.traverse(o=>{ if(o.material&&o.material.transparent&&o.material.opacity<.5&&MAT.enemy[e.k]) o.material=MAT.enemy[e.k]; }); } fxRing(COLS/2,ROWS/2,Math.max(COLS,ROWS),0x66D9E8); sfx('freeze'); toast('Isolationsmessung! Alle Schutzschichten weg'); }
+  else if(curHero==='kran'){ let best=null,bn=-1; for(const e of G.enemies){ if(e.dead) continue; const n=G.enemies.filter(o=>!o.dead&&(o.x-e.x)**2+(o.y-e.y)**2<2.25).length; if(n>bn){bn=n;best=e;} } if(best){ const x=best.x,y=best.y; fxStrike(x,y); fxBoom(x,y,1.6,0xFFE066); for(const o of G.enemies.slice()) if(!o.dead&&(o.x-x)**2+(o.y-y)**2<=2.56) damage(o,dmg,src); } sfx('boom'); toast(`Container! ${dmg} Schaden`); }
+  else if(curHero==='chef'){ for(const e of G.enemies) if(!e.dead) e.stun=Math.max(e.stun,e.boss?.8:e.big?2:3+L*.1); const m=150*L; G.money+=m; fxRing(COLS/2,ROWS/2,Math.max(COLS,ROWS),0xFF6B6B); sfx('boss'); toast(`Machtwort! +${m} Kupfer`); }
+  else if(curHero==='ingenieurin'){ for(const k in G.abil) G.abil[k].cd=0; G.overloadT=Math.max(G.overloadT,3+L*.3); sfx('upgrade'); toast('Optimierung! Fähigkeiten bereit'); }
   else if(curHero==='azubi'){
     G.tangleT=ultraDur(L);
     for(const e of G.enemies.slice()) if(!e.dead) damage(e,dmg,src);
@@ -604,7 +845,7 @@ function useUltra(){
 }
 function strongest(){ let b=null; for(const e of G.enemies){ if(e.dead) continue; if(!b||e.rank>b.rank||(e.rank===b.rank&&e.dist>b.dist)) b=e; } return b; }
 function useAbility(type){
-  if(!G.running||!G.abil[type]||G.abil[type].cd>0) return;
+  if(!G.running||!G.abil[type]||G.abil[type].cd>0||M('noAbil',false)) return;
   const big={iso:true,camo:true,vsBig:1};
   switch(type){
     case 'funke': G.towers.forEach(t=>{ if(t.type==='funke') t.boostT=6; }); sfx('zap'); break;
@@ -615,6 +856,7 @@ function useAbility(type){
     case 'plasma': G.burnT=8; sfx('boom'); break;
     case 'windrad': G.money+=1500; sfx('coin'); break;
     case 'trafo': G.overloadT=Math.max(G.overloadT,10); sfx('ultra'); break;
+    case 'akw': { const src={iso:true,camo:true,vsBig:1}; for(const e of G.enemies.slice()) if(!e.dead) damage(e,2000,src); G.flashT=1; fxRing(COLS/2,ROWS/2,Math.max(COLS,ROWS),0x51CF66); sfx('ultra'); break; }
     case 'sicherung': { const s={iso:true,camo:true,vsBig:1}; for(let pi=0;pi<PATHS.length;pi++) for(let d=1;d<PATHS[pi].total;d+=1.2){ const [x,y]=posAt(pi,d); if(x>0&&y>0&&x<COLS&&y<ROWS) G.traps.push(makeTrap({t:null,x,y,pierce:40,dmg:5,life:30,s,hit:new Set()})); } sfx('build'); break; }
     case 'kuehl': for(const e of G.enemies) if(!e.dead) e.stun=Math.max(e.stun,e.boss?1:3); fxRing(COLS/2,ROWS/2,Math.max(COLS,ROWS),0x74C0FC); sfx('freeze'); break;
     case 'drohne': { const L=G.enemies.filter(e=>!e.dead).sort((a,b)=>b.rank-a.rank).slice(0,8); for(const e of L){ fxBoom(e.x,e.y,1.5,0xB197FC); for(const o of G.enemies.slice()) if(!o.dead&&(o.x-e.x)**2+(o.y-e.y)**2<=2.25) damage(o,50,big); } sfx('boom'); break; }
@@ -624,8 +866,34 @@ function useAbility(type){
   toast(ABIL[type].n+'!');
 }
 function refreshAbilities(){
-  for(const t of G.towers){ if(t.type!=='held' && Math.max(t.lv[0],t.lv[1])>=4 && !G.abil[t.type]){ G.abil[t.type]={cd:0}; toast(`Neue Fähigkeit: ${ABIL[t.type].n}`); } }
-  for(const k in G.abil){ if(!G.towers.some(t=>t.type===k&&Math.max(t.lv[0],t.lv[1])>=4)) delete G.abil[k]; }
+  if(M('noAbil',false)) return;
+  for(const t of G.towers){ if(t.type!=='held' && (Math.max(t.lv[0],t.lv[1])>=4||t.type==='akw') && !G.abil[t.type]){ G.abil[t.type]={cd:0}; toast(`Neue Fähigkeit: ${ABIL[t.type].n}`); } }
+  for(const k in G.abil){ if(!G.towers.some(t=>t.type===k&&(Math.max(t.lv[0],t.lv[1])>=4||k==='akw'))) delete G.abil[k]; }
+}
+const FUSE_COST=12000;
+function fusionSquare(t){
+  if(!t||(t.type!=='windrad'&&t.type!=='trafo')) return null;
+  for(const [dx,dy] of [[0,0],[1,0],[0,1],[1,1]]){
+    const x0=t.x-dx, y0=t.y-dy, cells=[[x0,y0],[x0+1,y0],[x0,y0+1],[x0+1,y0+1]];
+    const ts=cells.map(([x,y])=>G.towers.find(o=>o.x===x&&o.y===y&&!o.sz));
+    if(ts.some(o=>!o)) continue;
+    const w=ts.filter(o=>o.type==='windrad').length, tr=ts.filter(o=>o.type==='trafo').length;
+    if(w===2&&tr===2) return {x:x0,y:y0,ts};
+  }
+  return null;
+}
+function fuse(t){
+  const sq=fusionSquare(t), cost=price(FUSE_COST);
+  if(!sq||G.money<cost) return false;
+  G.money-=cost;
+  let spent=cost;
+  for(const o of sq.ts){ spent+=o.spent; if(HAS3D&&o.m) scene.remove(o.m.g); }
+  G.towers=G.towers.filter(o=>!sq.ts.includes(o));
+  const a={id:uid++,type:'akw',x:sq.x,y:sq.y,sz:2,lv:[0,0],spent,cd:1,prio:'first'};
+  G.towers.push(a); addTowerMesh(a); recalc(); refreshAbilities();
+  G.sel=a; G.flashT=1; fxRing(tcx(a),tcy(a),3,0x51CF66); sfx('level'); stat('fusions',1);
+  toast('Atomkraftwerk in Betrieb!');
+  return true;
 }
 function startWave(){
   if(!G.running||G.active) return;
@@ -642,17 +910,26 @@ function update(dt){
   for(const e of g.enemies){
     e.slowF=1; if(e.shield>0) e.shield-=dt;
     if(e.regen && e.hp<e.max && e.max>1) e.hp=Math.min(e.max,e.hp+e.max*.08*dt);
-    if(e.jamT>0){ e.jamT-=dt; if(e.jamT<=0 && !e.dead){ e.jamT=5; let hit=false; for(const t of g.towers){ if(t.type==='held') continue; if((t.x+.5-e.x)**2+(t.y+.5-e.y)**2<=2.6){ t.jam=1.6; hit=true; } } if(hit){ fxRing(e.x,e.y,1.6,0x7048E8); } } }
+    if(e.jamT>0){ e.jamT-=dt; if(e.jamT<=0 && !e.dead){ e.jamT=5; let hit=false; for(const t of g.towers){ if(t.type==='held') continue; if((tcx(t)-e.x)**2+(tcy(t)-e.y)**2<=2.6){ t.jam=1.6; hit=true; } } if(hit){ fxRing(e.x,e.y,1.6,0x7048E8); } } }
   }
+  if(M('sandbox',false)){ g.money=Math.max(g.money,9999999); }
   if(g.hero && g.ultraCd>0) g.ultraCd=Math.max(0,g.ultraCd-dt);
   for(const k in g.abil) if(g.abil[k].cd>0) g.abil[k].cd=Math.max(0,g.abil[k].cd-dt);
   if(g.overloadT>0) g.overloadT-=dt;
+  if(g.coffeeT>0) g.coffeeT-=dt;
   if(g.tangleT>0){ g.tangleT-=dt; for(const e of g.enemies) e.slowF=Math.min(e.slowF,e.boss?.8:e.big?.6:.35); }
-  if(g.burnT>0){ g.burnT-=dt; const src={iso:true,camo:true,vsBig:1}; for(const e of g.enemies.slice()) damage(e,4*dt,src); }
+  if(g.burnT>0){ g.burnT-=dt; const src={iso:true,camo:true,vsBig:1}; for(const e of g.enemies.slice()) damage(e,(g.burnDps||4)*dt,src); if(g.burnT<=0) g.burnDps=0; }
   for(const t of g.towers){
-    const s=t.s; const rate=(g.overloadT>0?2:1)*((t.boostT||0)>0?3:1); if(t.boostT>0) t.boostT-=dt; t.cd=Math.max(0,t.cd-dt*rate); t.on=false;
-    const cx=t.x+.5, cy=t.y+.5;
+    const s=t.s; const rate=(g.overloadT>0?2:1)*(g.coffeeT>0?1.5:1)*((t.boostT||0)>0?3:1); if(t.boostT>0) t.boostT-=dt; t.cd=Math.max(0,t.cd-dt*rate); t.on=false;
+    const cx=tcx(t), cy=tcy(t);
     if(t.jam>0){ t.jam-=dt; continue; }
+    if(s.kind==='akw'){
+      if(t.cd>0) continue;
+      const r2=s.range*s.range, list=g.enemies.filter(e=>!e.dead&&(e.x-cx)**2+(e.y-cy)**2<=r2);
+      if(!list.length) continue;
+      for(const e of list) damage(e,s.dmg,s);
+      t.cd=s.cd; t.flash=.4; fxRing(cx,cy,s.range,0x51CF66); sfx('zap'); continue;
+    }
     if(s.kind==='mine'){
       if(t.cd>0) continue;
       if(!t.pp){ t.pp=[]; for(let pi=0;pi<PATHS.length;pi++) for(let d=.25;d<PATHS[pi].total;d+=.25){ const [x,y]=posAt(pi,d); if(x<0||y<0||x>COLS||y>ROWS) continue; if((x-cx)**2+(y-cy)**2<=s.range*s.range) t.pp.push([x,y]); } }
@@ -707,13 +984,14 @@ function update(dt){
         const dx=e.x-cx,dy=e.y-cy; if(dx*dx+dy*dy>r2) continue;
         damage(e,s.dps*dt,s); n++;
       }
-      t.on=n>0;
+      t.on=n>0; if(n&&t.type==='held') heroXp(t,dt*4);
       continue;
     }
     if(s.kind==='farm'||s.kind==='buff') continue;
     if(t.cd>0) continue;
     const tg=pickTarget(t,s); if(!tg) continue;
     t.cd=s.cd; t.aim=Math.atan2(tg.x-cx,tg.y-cy); t.flash=.12;
+    if(t.type==='held'&&s.kind!=='hero'&&s.kind!=='heroDart') heroXp(t,2);
     if(s.kind==='dart'||s.kind==='heroDart'){
       sfx('pew');
       const base=t.aim;
@@ -756,7 +1034,8 @@ function update(dt){
     e.dist+=e.sp*e.slowF*dt;
     if(e.dist>=(PATHS[e.pi]||PATHS[0]).total){
       e.dead=true;
-      if(e.boss){ g.lives=0; }
+      if(e.boss){ if(!M('sandbox',false)) g.lives=0; }
+      else if(M('sandbox',false)) { }
       else { g.lives-=Math.max(1,Math.round(leakCost(e.k)*(ENEMY[e.k].scale?hpScale(g.wave):1))); hurt(); sfx('leak'); g.lostLives=true; }
       continue;
     }
@@ -798,7 +1077,7 @@ function update(dt){
   if(g.lives<=0){ g.lives=0; gameOver(); return; }
   if(g.active && !g.queue.length && !g.enemies.length){
     g.active=false;
-    let inc=Math.round((150+g.wave*5)*(1+.1*perk('bonus'))*(DAILY&&DAILY.mod==='reich'?1.5:1));
+    let inc=M('noBonus',false)?0:Math.round((150+g.wave*5)*(1+.1*perk('bonus'))*(1+.05*shopLv('g.bonus'))*M('incomeMul',1)*(g.hero&&curHero==='chef'?1.1+g.hero.hlv*.02:1));
     for(const t of g.towers) if(t.s.income) inc+=Math.round(t.s.income);
     g.money+=inc; saveBest(g.wave);
     if(g.hero) heroXp(g.hero,120+g.wave*25);
@@ -814,7 +1093,8 @@ function update(dt){
 
 /* ================= 3D ================= */
 let renderer, scene, camera, sun, hemi, board=null, ghost=null, rangeRing=null, base3d=null;
-const GEO={}, MAT={};
+const GEO={}, MAT={}; let GLOWTEX=null;
+function glowSprite(col,size,op){ const m=new THREE.Sprite(new THREE.SpriteMaterial({map:GLOWTEX,color:col,transparent:true,opacity:op||.7,depthWrite:false,blending:THREE.AdditiveBlending})); m.scale.setScalar(size); return m; }
 let C={};
 function readColors(){
   const s=getComputedStyle(document.documentElement);
@@ -841,6 +1121,9 @@ function init3D(){
   sun.shadow.bias=-.0015;
   sun.shadow.camera.updateProjectionMatrix();
   scene.add(sun);
+  const rim=new THREE.DirectionalLight(0x9EC5FF,.35); rim.position.set(7,6,-9); scene.add(rim);
+  const warm=new THREE.DirectionalLight(0xFFD8A8,.18); warm.position.set(-8,4,-4); scene.add(warm);
+  { const c=document.createElement('canvas'); c.width=c.height=64; const x=c.getContext('2d'); const gr=x.createRadialGradient(32,32,0,32,32,32); gr.addColorStop(0,'rgba(255,255,255,1)'); gr.addColorStop(.35,'rgba(255,255,255,.45)'); gr.addColorStop(1,'rgba(255,255,255,0)'); x.fillStyle=gr; x.fillRect(0,0,64,64); GLOWTEX=new THREE.CanvasTexture(c); }
   GEO.sphere=new THREE.SphereGeometry(1,18,12);
   GEO.dodeca=new THREE.DodecahedronGeometry(1,0);
   GEO.box=new THREE.BoxGeometry(1,1,1);
@@ -863,7 +1146,7 @@ function init3D(){
   MAT.enemy={}; MAT.camo={};
   for(const k in ENEMY){
     const d=ENEMY[k];
-    const o={emissive:d.col,emissiveIntensity:.25,roughness:.35};
+    const o={emissive:d.col,emissiveIntensity:.42,roughness:.3,metalness:.1};
     if(k==='iso') Object.assign(o,{metalness:.9,roughness:.2,emissiveIntensity:.05});
     if(k==='spannung') Object.assign(o,{emissive:0x6b1d1d,emissiveIntensity:.5,roughness:.2,metalness:.4});
     if(k==='boss') Object.assign(o,{emissive:0xFF2D2D,emissiveIntensity:.35,metalness:.5,roughness:.3});
@@ -1017,7 +1300,9 @@ function buildBoard(){
 function makeTower(type){
   const d=TOWERS[type], col=d.col, g=new THREE.Group();
   const accent=std(col,{roughness:.4,metalness:.25});
-  g.add(mesh(GEO.base,MAT.base,0,.1,0));
+  const baseCol=new THREE.Color(col).lerp(new THREE.Color(0x2B3138),.55).getHex();
+  g.add(mesh(GEO.base,dmat(baseCol,{roughness:.5,metalness:.35}),0,.1,0));
+  const plate=mesh(new THREE.CylinderGeometry(.3,.3,.02,24),dmat(new THREE.Color(col).lerp(new THREE.Color(0xffffff),.25).getHex(),{roughness:.4,metalness:.3}),0,.205,0,false); g.add(plate);
   const ringMat=std(col,{emissive:col,emissiveIntensity:.2,roughness:.3});
   const ring=mesh(GEO.ring,ringMat,0,.2,0,false); ring.rotation.x=Math.PI/2; g.add(ring);
   const head=new THREE.Group(); g.add(head);
@@ -1107,7 +1392,28 @@ function makeTower(type){
     [-.15,0,.15].forEach(x=>{ g.add(mesh(new THREE.CylinderGeometry(.04,.04,.26,10),MAT.porcelain,x,.76,0)); [.68,.76,.84].forEach(y=>g.add(mesh(new THREE.CylinderGeometry(.075,.075,.02,12),MAT.porcelain,x,y,0,false))); });
     aura=mesh(GEO.disc,new THREE.MeshBasicMaterial({color:col,transparent:true,opacity:.07,depthWrite:false}),0,.02,0,false); aura.rotation.x=-Math.PI/2; g.add(aura);
   }
-  return {g,head,ring,ringMat,spin,glow,aura};
+  if(type==='akw'){
+    g.children.forEach(c=>c.visible=false);
+    const slab=mesh(GEO.box,dmat(0xADB5BD,{roughness:.8}),0,.06,0); slab.scale.set(1.86,.12,1.86); g.add(slab);
+    const lathe=new THREE.LatheGeometry([[.36,0],[.29,.3],[.25,.6],[.26,.85],[.3,1.05]].map(([a,b])=>new THREE.Vector2(a,b)),28);
+    const towerMat=std(0xE9ECEF,{roughness:.7,side:THREE.DoubleSide});
+    const steams=[];
+    [[.45,-.45],[.45,.45]].forEach(([x,z])=>{ const ct=mesh(lathe,towerMat,x,.12,z); g.add(ct);
+      const band=mesh(new THREE.CylinderGeometry(.262,.262,.06,24,1,true),dmat(0xE03131,{side:THREE.DoubleSide}),x,1.0,z,false); g.add(band);
+      for(let i=0;i<4;i++){ const st=mesh(GEO.sphere,new THREE.MeshStandardMaterial({color:0xffffff,transparent:true,opacity:.6,roughness:1,depthWrite:false}),x,1.2,z,false); st.userData={x,z,ph:i/4}; g.add(st); steams.push(st); } });
+    const dome=mesh(new THREE.CylinderGeometry(.3,.3,.4,24),dmat(0xDEE2E6,{roughness:.5}),-.45,.32,.4); g.add(dome);
+    const cap=mesh(new THREE.SphereGeometry(.3,24,12,0,Math.PI*2,0,Math.PI/2),dmat(0xF1F3F5,{roughness:.35,metalness:.2}),-.45,.52,.4); g.add(cap);
+    const bld=mesh(GEO.box,dmat(0x495057,{roughness:.6}),-.45,.3,-.42); bld.scale.set(.62,.36,.5); g.add(bld);
+    const win=new THREE.MeshStandardMaterial({color:0x51CF66,emissive:0x51CF66,emissiveIntensity:1});
+    for(let i=0;i<4;i++){ const w=mesh(GEO.box,win,-.66+i*.14,.34,-.165,false); w.scale.set(.07,.07,.01); g.add(w); }
+    const sign=mesh(new THREE.CylinderGeometry(.13,.13,.02,3),dmat(0xFAB005),-.45,.49,-.42,false); g.add(sign);
+    glow=mesh(GEO.sphere,glowMat(0x51CF66),-.45,.86,.4,false); glow.scale.setScalar(.06); g.add(glow);
+    aura=mesh(GEO.disc,new THREE.MeshBasicMaterial({color:0x51CF66,transparent:true,opacity:.07,depthWrite:false}),0,.02,0,false); aura.rotation.x=-Math.PI/2; g.add(aura);
+    g.userData.steams=steams;
+  }
+  if(glow){ const sp=glowSprite(glow.material.color.getHex(),9,.55); glow.add(sp); }
+  g.traverse(o=>{ if(o.isMesh&&o.castShadow) o.receiveShadow=true; });
+  return {g,head,ring,ringMat,spin,glow,aura,h:type==='windrad'?1.45:type==='tesla'?1.05:type==='akw'?1.2:.9};
 }
 function makeDroneMesh(){
   const g=new THREE.Group();
@@ -1125,7 +1431,7 @@ function makeTrap(p){
 function removeTrap(p){ if(HAS3D&&p.m) scene.remove(p.m); }
 function addTowerMesh(t){
   if(!HAS3D) return;
-  t.m=makeTower(t.type); t.m.g.position.set(wx(t.x+.5),0,wz(t.y+.5)); scene.add(t.m.g);
+  t.m=makeTower(t.type); t.m.g.position.set(wx(tcx(t)),0,wz(tcy(t))); scene.add(t.m.g);
 }
 function updateTowerLook(t){
   if(!HAS3D||!t.m) return;
@@ -1133,7 +1439,17 @@ function updateTowerLook(t){
   const col = top>=3 ? 0xF2C200 : TOWERS[t.type].col;
   t.m.ringMat.color.setHex(col); t.m.ringMat.emissive.setHex(col);
   t.m.ringMat.emissiveIntensity = top>=4 ? .9 : top>=3 ? .45 : .2;
-  t.m.g.scale.setScalar(1+.04*(t.lv[0]+t.lv[1]));
+  t.m.g.scale.setScalar(t.type==='akw'?1:1+.04*(t.lv[0]+t.lv[1]));
+  // Ausbaustufen sichtbar machen: Lichtpunkte am Sockel, goldene Krone ab Stufe 3, schwebender Ring ab Stufe 4
+  if(!t.m.deco){ t.m.deco=new THREE.Group(); t.m.g.add(t.m.deco); }
+  t.m.deco.clear();
+  const pcol=[TOWERS[t.type].col,0xF2C200];
+  for(let p=0;p<2;p++) for(let i=0;i<t.lv[p];i++){
+    const a=(p?Math.PI:0)+(i-1.5)*.38, pip=mesh(GEO.sphere,new THREE.MeshStandardMaterial({color:i>=2?0xF2C200:0xffffff,emissive:i>=2?0xF2C200:pcol[0],emissiveIntensity:.9}),Math.sin(a)*.39,.21,Math.cos(a)*.39,false); pip.scale.setScalar(.035); t.m.deco.add(pip);
+  }
+  if(top>=3){ const cr=mesh(new THREE.TorusGeometry(.16,.025,8,24),dmat(0xF2C200,{metalness:.8,roughness:.2,emissive:0xF2C200,emissiveIntensity:.3}),0,t.m.h+.05,0,false); cr.rotation.x=Math.PI/2; t.m.deco.add(cr);
+    for(let i=0;i<5;i++){ const a=i*Math.PI*2/5, sp=mesh(new THREE.ConeGeometry(.025,.08,6),dmat(0xF2C200,{metalness:.8,roughness:.2}),Math.sin(a)*.16,t.m.h+.1,Math.cos(a)*.16,false); t.m.deco.add(sp); } }
+  if(top>=4){ const halo=mesh(new THREE.TorusGeometry(.42,.03,8,40),new THREE.MeshStandardMaterial({color:0xFFE066,emissive:0xFFE066,emissiveIntensity:1.2}),0,t.m.h+.25,0,false); halo.rotation.x=Math.PI/2; halo.userData.halo=true; t.m.deco.add(halo); const hs=glowSprite(0xFFE066,1.2,.35); hs.position.set(0,t.m.h+.25,0); t.m.deco.add(hs); }
   if(t.m.aura) t.m.aura.scale.setScalar(t.type==='held'?(t.s.aura||1):t.s.range);
 }
 function addEnemyMesh(e){
@@ -1180,6 +1496,7 @@ function addEnemyMesh(e){
     const ring=new THREE.Mesh(new THREE.TorusGeometry(1,.08,6,20),e.regen?MAT.regen:MAT.fort); ring.rotation.x=Math.PI/2;
     if(host){ ring.scale.setScalar(e.r*1.4); host.add(ring); } else { ring.scale.setScalar(1.3); m.add(ring); }
   }
+  if(!e.big&&!e.camo){ const gs=glowSprite(ENEMY[e.k].col,(m.isGroup?e.r*3.2:3.2),.5); m.add(gs); }
   e.m=m; e.ph=Math.random()*6; scene.add(m);
 }
 function removeEnemyMesh(e){ if(!HAS3D) return; if(e.m) scene.remove(e.m); if(e.bar) scene.remove(e.bar); }
@@ -1311,6 +1628,10 @@ function render(time,dt){
     if(m.aura) m.aura.material.opacity = t.on ? .12+Math.sin(tt*8)*.04 : .06;
   }
   for(const f of decoAnim) f(tt);
+  for(const t of G.towers){ if(!t.m) continue;
+    if(t.m.deco) t.m.deco.children.forEach(c=>{ if(c.userData.halo){ c.rotation.z=tt*1.5; c.position.y=t.m.h+.25+Math.sin(tt*2)*.04; } });
+    const st=t.m.g.userData.steams; if(st) st.forEach(p=>{ const k=(tt*.35+p.userData.ph)%1; p.position.set(p.userData.x+k*.15,1.2+k*.9,p.userData.z); p.scale.setScalar(.12+k*.25); p.material.opacity=.55*(1-k); });
+  }
   for(const t of G.towers){
     if(t.type!=='drohne'||!t.m) continue;
     const n=t.drones?t.drones.length:0; t.m.dr=t.m.dr||[];
@@ -1324,10 +1645,10 @@ function render(time,dt){
   // Geist und Reichweite
   const show=(x,y,r,col)=>{ rangeRing.visible=r<50; rangeRing.position.set(wx(x+.5),.03,wz(y+.5)); rangeRing.scale.setScalar(r); rangeRing.children.forEach(c=>c.material.color.setHex(col)); };
   rangeRing.visible=false; ghost.visible=false;
-  if(G.sel) show(G.sel.x,G.sel.y,G.sel.s.range,0xffffff);
+  if(G.sel) show(tcx(G.sel)-.5,tcy(G.sel)-.5,G.sel.s.range,0xffffff);
   else if(G.build && G.ghost){
     const ok=canBuild(G.ghost.x,G.ghost.y);
-    ghost.visible=true; ghost.position.set(wx(G.ghost.x+.5),0,wz(G.ghost.y+.5)); ghost.userData.mat.color.setHex(ok?0xffffff:0xFF6B6B);
+    ghost.visible=true; ghost.position.set(wx(G.ghost.x+.5),0,wz(G.ghost.y+.5)); ghost.userData.mat.color.setHex(ok?TOWERS[G.build].col:0xFF6B6B);
     const r=TOWERS[G.build].base.range; if(r>0) show(G.ghost.x,G.ghost.y,r, ok?0xffffff:0xFF6B6B);
   }
   if(base3d){ const l=base3d.userData.lamp; const hurtT=Math.max(0,(G.hurtT||0)); l.material.color.setHex(hurtT>0?0xFF4D4D:0x51CF66); l.material.emissive.setHex(hurtT>0?0xFF4D4D:0x51CF66); }
@@ -1341,7 +1662,7 @@ function resize(){
   const was=portrait;
   setupMap();
   if(was!==undefined && was!==portrait && G){
-    G.towers.forEach(t=>{ const x=t.x; t.x=t.y; t.y=x; if(t.m) t.m.g.position.set(wx(t.x+.5),0,wz(t.y+.5)); });
+    G.towers.forEach(t=>{ const x=t.x; t.x=t.y; t.y=x; if(t.m) t.m.g.position.set(wx(tcx(t)),0,wz(tcy(t))); });
     G.proj.forEach(removeProj); G.proj=[]; G.traps.forEach(removeTrap); G.traps=[];
     G.enemies.forEach(e=>{ [e.x,e.y]=posAt(e.pi,e.dist); });
     G.ghost=null; recalc();
@@ -1355,6 +1676,7 @@ function resize(){
 
 /* ================= Icons ================= */
 function drawIcon(c,type,S){
+  const heroKey=type==='held'?curHero:(HEROES[type]?type:null); if(heroKey) type='__hero';
   const ink=C.ink||'#1C2A35', dark=isDarkUI();
   const line=dark?'#E4ECF1':'#1C2A35';
   c.save(); c.scale(S/40,S/40); c.lineJoin='round'; c.lineCap='round'; c.lineWidth=1.6; c.strokeStyle=line;
@@ -1362,8 +1684,8 @@ function drawIcon(c,type,S){
   const plate=(col)=>{ c.fillStyle='#46525C'; c.beginPath(); c.ellipse(20,31,12,4.5,0,0,7); c.fill(); c.fillRect(8,27,24,4); c.beginPath(); c.ellipse(20,27,12,4.5,0,0,7); c.fillStyle='#5D6B76'; c.fill(); c.strokeStyle=col; c.lineWidth=2; c.stroke(); c.lineWidth=1.6; c.strokeStyle=line; };
   const P=(pts,fill,stroke=true)=>{ c.beginPath(); pts.forEach(([x,y],i)=>i?c.lineTo(x,y):c.moveTo(x,y)); c.closePath(); if(fill){c.fillStyle=fill;c.fill();} if(stroke) c.stroke(); };
   switch(type){
-    case 'held': case 'elektriker': case 'meisterin': case 'azubi': {
-      const H=HEROES[type==='held'?curHero:type], hx=n=>'#'+n.toString(16).padStart(6,'0');
+    case '__hero': {
+      const H=HEROES[heroKey], hx=n=>'#'+n.toString(16).padStart(6,'0');
       shadow();
       c.fillStyle=hx(H.suit); c.fillRect(14,24,12,10); c.strokeRect(14,24,12,10);
       c.fillStyle=hx(H.vest); c.fillRect(14,27,12,3);
@@ -1445,6 +1767,11 @@ function drawIcon(c,type,S){
       shadow(); plate('#15AABF'); c.fillStyle='#ADB5BD'; c.fillRect(8,16,24,3); c.fillRect(8,22,24,3); c.strokeRect(8,16,24,3); c.strokeRect(8,22,24,3);
       c.strokeStyle='#C07A3E'; c.lineWidth=2.2; [12,18,24].forEach(x=>{ c.beginPath(); c.ellipse(x,20.5,1.8,6,0,0,7); c.stroke(); });
       c.strokeStyle='#66D9E8'; c.lineWidth=2.4; c.beginPath(); c.moveTo(32,20.5); c.lineTo(40,20.5); c.stroke(); break;
+    case 'akw':
+      c.fillStyle='rgba(0,0,0,.18)'; c.beginPath(); c.ellipse(20,35,15,3,0,0,7); c.fill();
+      [[13,0],[27,0]].forEach(([x])=>{ c.fillStyle='#E9ECEF'; c.beginPath(); c.moveTo(x-6,34); c.quadraticCurveTo(x-3,24,x-4.5,16); c.lineTo(x+4.5,16); c.quadraticCurveTo(x+3,24,x+6,34); c.closePath(); c.fill(); c.stroke(); c.fillStyle='#E03131'; c.fillRect(x-4.4,17,8.8,2); });
+      c.fillStyle='rgba(222,226,230,.9)'; [[12,11,4],[16,8,3.5],[27,10,4],[31,6,3.5],[23,6,3]].forEach(([x,y,r])=>{ c.beginPath(); c.arc(x,y,r,0,7); c.fill(); });
+      c.fillStyle='#51CF66'; c.beginPath(); c.arc(20,30,3,0,7); c.fill(); break;
     case 'trafo':
       shadow();
       c.fillStyle='#5C8A6E'; c.fillRect(11,16,18,17); c.strokeRect(11,16,18,17);
@@ -1522,33 +1849,62 @@ document.addEventListener('pointerdown',audioInit,{passive:true});
 const towersEl=$('#towers'), go=$('#go'), panel=$('#panel'), bar=$('#bar'), hint=$('#hint');
 const hex=c=>'#'+c.toString(16).padStart(6,'0');
 let towerBtns=[];
+const CATS=[['alle','Alle'],['angriff','Angriff'],['kontrolle','Kontrolle'],['wirtschaft','Wirtschaft']];
+const CAT_OF={funke:'angriff',tesla:'angriff',kondi:'angriff',laser:'angriff',plasma:'angriff',drohne:'angriff',schiene:'angriff',magnet:'kontrolle',kuehl:'kontrolle',sicherung:'kontrolle',windrad:'wirtschaft',trafo:'wirtschaft',held:'alle'};
+let curCat='alle';
+function towerTags(k,s){
+  const t=[]; s=s||TOWERS[k].base;
+  if(s.range>=50) t.push(['Ganze Karte','b']); else if(s.range>0) t.push([`Reichweite ${String(Math.round(s.range*10)/10).replace('.',',')}`,'']);
+  if(s.camo&&!['farm','buff'].includes(s.kind)) t.push(['Sieht Getarnte','g']);
+  if(s.iso&&!['farm','buff'].includes(s.kind)) t.push(['Trifft Isolierte','o']);
+  if(s.kind==='farm') t.push(['Kupfer pro Welle','g']);
+  if(s.kind==='buff'||s.kind==='akw') t.push(['Verstärkt Geräte','b']);
+  return t.map(([n,c])=>`<span class="tag ${c}">${n}</span>`).join('');
+}
 function renderBar(){
+  $('#cats').innerHTML=CATS.map(([k,n])=>`<button class="cat" data-cat="${k}" aria-pressed="${curCat===k}">${n}</button>`).join('');
+  $('#cats').querySelectorAll('.cat').forEach(b=>b.addEventListener('click',()=>{ sfx('click'); curCat=b.dataset.cat; renderBar(); }));
   towersEl.innerHTML='';
-  KEYS.forEach(k=>{
+  KEYS.filter(k=>curCat==='alle'||CAT_OF[k]===curCat).forEach(k=>{
     const d=TOWERS[k], b=document.createElement('button');
     b.className='tw'; b.dataset.k=k; b.setAttribute('aria-pressed','false');
-    b.title=`${d.full||d.n}: ${d.desc}`;
+    b.style.setProperty('--c',hex(d.col===0xDEE2E6?0x868E96:d.col));
     if(d.hero) b.classList.add('hero');
-    b.innerHTML=`<canvas data-ico="${k}"></canvas><span class="n">${d.n}</span><span class="p cu">${costOf(k)}</span>`;
+    b.innerHTML=`<canvas data-ico="${k}"></canvas><span class="n">${d.n}</span><span class="p cu">${fmt(costOf(k))}</span>`;
     b.addEventListener('click',()=>{ sfx('click'); selectBuild(k); });
     towersEl.appendChild(b);
   });
   towerBtns=[...towersEl.children];
   drawIcons();
 }
+function showBuildInfo(){
+  const el=$('#buildInfo'), k=G.build;
+  if(!k){ el.hidden=true; el._k=''; return; }
+  if(el._k===k){ el.hidden=false; return; }
+  el._k=k; const d=TOWERS[k];
+  el.style.setProperty('--c',hex(d.col===0xDEE2E6?0x868E96:d.col));
+  el.innerHTML=`<canvas data-ico="${k}"></canvas><b>${d.full||d.n} · ${fmt(costOf(k))} Kupfer</b><button id="biX" aria-label="Abbrechen">✕</button><span class="bi-d">${d.desc} Tippe zweimal auf ein freies Feld.</span><span class="bi-t">${d.hero?'':towerTags(k)}</span>`;
+  el.hidden=false; drawIcons();
+  $('#biX').addEventListener('click',()=>{ G.build=null; G.ghost=null; });
+}
 function selectBuild(k){
   if(!G.running) return;
   if(TOWERS[k].hero && G.hero){ G.sel=G.hero; G.build=null; G.ghost=null; return; }
   G.build = G.build===k ? null : k; G.sel=null; G.ghost=null;
-  if(G.build) toast(`${TOWERS[k].full||TOWERS[k].n}: ${TOWERS[k].desc}`);
 }
 function canBuild(x,y){ return x>=0&&y>=0&&x<COLS&&y<ROWS && !pathSet.has(x+','+y) && !blockSet.has(x+','+y) && !towerAt(x,y); }
-function towerAt(x,y){ return G.towers.find(t=>t.x===x&&t.y===y); }
+function towerAt(x,y){ return G.towers.find(t=>x>=t.x&&y>=t.y&&x<t.x+(t.sz||1)&&y<t.y+(t.sz||1)); }
+function ruleBlock(type){
+  const h=TOWERS[type].hero, al=M('allow',null);
+  if(h && M('noHero',false)) return 'In diesem Modus ohne Held';
+  if(!h && al && !al.includes(type)) return 'In diesem Modus nicht erlaubt';
+  if(!h && M('maxTowers',0) && G.towers.filter(t=>t.type!=='held').length>=M('maxTowers',0)) return `Höchstens ${M('maxTowers',0)} Geräte erlaubt`;
+  return '';
+}
 function place(type,x,y){
   const cost=costOf(type);
   if(!canBuild(x,y)||G.money<cost) return null;
-  if(DAILY&&DAILY.only&&!TOWERS[type].hero&&!DAILY.only.includes(type)){ toast('Heute nicht erlaubt'); return null; }
-  if(DAILY&&DAILY.mod==='ohneheld'&&TOWERS[type].hero){ toast('Heute ohne Held'); return null; }
+  const blocked=ruleBlock(type); if(blocked){ toast(blocked); return null; }
   G.money-=cost;
   const t={id:uid++,type,x,y,lv:[0,0],spent:cost,cd:0,prio:'first'};
   if(TOWERS[type].hero){ if(G.hero){ G.money+=cost; return null; } t.hlv=1+perk('held'); t.xp=HERO_XP[t.hlv-1]; G.hero=t; G.ultraCd=ultraCd(1)*.5; toast(`${HEROES[curHero].full} ist da!`); }
@@ -1564,6 +1920,7 @@ function upgrade(t,p){
   return true;
 }
 function sell(t){
+  if(M('noSell',false)){ toast('Verkaufen ist in diesem Modus gesperrt'); return; }
   G.money+=Math.round(t.spent*(perk('verkauf')?.8:.7));
   if(HAS3D&&t.m&&t.m.dr) t.m.dr.forEach(d=>scene.remove(d));
   G.traps=G.traps.filter(p=>{ if(p.t===t){ removeTrap(p); return false; } return true; });
@@ -1578,13 +1935,13 @@ $('#abils').addEventListener('click',ev=>{ const b=ev.target.closest('button[dat
 $('#sound').addEventListener('click',()=>{ audioInit(); setMuted(!muted); updSound(); });
 function updSound(){ const b=$('#sound'); b.classList.toggle('off',muted); b.setAttribute('aria-label',muted?'Ton einschalten':'Ton ausschalten'); }
 updSound();
-$('#auto').addEventListener('click',()=>{ G.auto=!G.auto; G.autoT=.5; });
+$('#auto').addEventListener('click',()=>{ if(M('forceAuto',false)){ toast('Hier laufen die Wellen ohne Pause'); return; } G.auto=!G.auto; G.autoT=.5; });
 $('#pause').addEventListener('click',()=>{ if(G.running) G.paused=!G.paused; });
 $('#speed').addEventListener('click',()=>{ G.speed = G.speed>=3 ? 1 : G.speed+1; });
 $('#pClose').addEventListener('click',()=>{ G.sel=null; });
 $('#prio').addEventListener('click',()=>{ const t=G.sel; if(!t) return; const i=PRIO.findIndex(p=>p[0]===t.prio); t.prio=PRIO[(i+1)%PRIO.length][0]; });
 $('#sell').addEventListener('click',()=>{ if(G.sel) sell(G.sel); });
-$('#paths').addEventListener('click',ev=>{ const b=ev.target.closest('button[data-p]'); if(b&&G.sel) upgrade(G.sel,+b.dataset.p); });
+$('#paths').addEventListener('click',ev=>{ const b=ev.target.closest('button[data-p]'); if(b&&!b.disabled&&G.sel){ if(upgrade(G.sel,+b.dataset.p)) panelKey=''; } });
 
 cvs.addEventListener('pointerdown',ev=>{
   if(!G.running) return;
@@ -1623,24 +1980,80 @@ function hurt(){
   try{ if(navigator.vibrate) navigator.vibrate(50); }catch(e){}
   const el=$('#lives'); el.classList.add('flash'); clearTimeout(flashT); flashT=setTimeout(()=>el.classList.remove('flash'),350);
 }
-function heroAttackName(){ return curHero==='meisterin'?'Messimpuls':curHero==='azubi'?'Kabelbinder':'Stromschlag'; }
+function heroAttackName(){ return HEROES[curHero].atk||(curHero==='meisterin'?'Messimpuls':curHero==='azubi'?'Kabelbinder':'Stromschlag'); }
 function heroAttackText(s){
+  const n=v=>fmt(Math.round(v*10)/10);
+  const X={praktikant:()=>`${n(s.dmg)} Schaden, ${s.multi} Klammer${s.multi>1?'n':''} pro Wurf`,
+    altgeselle:()=>`${n(s.dmg)} Schaden pro Schlag, ${s.vsBig}-fach gegen große Gegner`,
+    schweisserin:()=>`${n(s.dps)} Schaden pro Sekunde an bis zu ${s.pierce} Gegnern`,
+    pruefer:()=>`${n(s.dmg)} Schaden, durchschlägt ${s.pierce} Gegner. Geräte in der Nähe sehen Getarnte${s.bIso?' und treffen Isolierte':''}`,
+    kran:()=>`${n(s.dmg)} Schaden im großen Umkreis`,
+    chef:()=>`${n(s.dmg)} Schaden, springt auf ${s.chain} Gegner. Geräte in der Nähe +${s.bDmg} Schaden, Wellenbonus +${Math.round((.1+G.hero.hlv*.02)*100)} %`,
+    ingenieurin:()=>`${n(s.dmg)} Schaden, springt auf ${s.chain} Gegner. Geräte in der Nähe +${Math.round((s.bRange-1)*100)} % Reichweite`};
+  if(X[curHero]){ let r=X[curHero](); if(s.camo&&curHero!=='pruefer') r+=', sieht Getarnte'; if(s.iso) r+=', trifft Isolierte'; return r+'.'; }
   let t = curHero==='azubi' ? `${s.dmg} Schaden, ${s.multi} Kabelbinder pro Wurf` : curHero==='meisterin' ? `${s.dmg} Schaden, sehr schnell. Geräte in der Nähe schießen ${Math.round((1-s.bCd)*100)} % schneller${s.bDmg?' und machen +1 Schaden':''}` : `${s.dmg} Schaden an bis zu ${s.pierce} Gegnern`;
   if(s.camo) t+=', sieht Getarnte'; if(s.iso) t+=', trifft Isolierte';
   return t+'.';
 }
 function heroUltraText(L){
+  const U={praktikant:`Alle Geräte schießen ${ultraDur(L).toFixed(0)} Sekunden lang 50 % schneller, dazu ${60*L} Kupfer.`,
+    altgeselle:`${fmt(ultraDmg(L))} Schaden am stärksten Gegner (doppelt gegen große), betäubt ihn.`,
+    schweisserin:`Alle Gegner brennen ${ultraDur(L).toFixed(0)} Sekunden lang mit ${4+L*3} Schaden pro Sekunde.`,
+    pruefer:'Entfernt bei allen Gegnern Tarnung, Isolierung, Heilung und Panzerung.',
+    kran:`${fmt(ultraDmg(L))} Schaden an der dichtesten Gegnergruppe.`,
+    chef:`Alle Gegner erstarren, dazu ${150*L} Kupfer Prämie.`,
+    ingenieurin:'Alle Fähigkeiten sind sofort bereit, alle Geräte schießen kurz doppelt so schnell.'};
+  if(U[curHero]) return U[curHero];
   if(curHero==='meisterin') return `Alle Geräte schießen ${ultraDur(L).toFixed(0)} Sekunden lang doppelt so schnell.`;
   if(curHero==='azubi') return `Alle Gegner werden ${ultraDur(L).toFixed(0)} Sekunden stark gebremst und nehmen ${ultraDmg(L)} Schaden.`;
   return `${ultraDmg(L)} Schaden an allen Gegnern, betäubt sie kurz.`;
+}
+function buildPanel(t,sq){
+  const d=TOWERS[t.type], g=G;
+  const ic=$('#pIco'); ic.dataset.ico=t.type;
+  setText($('#pName'),d.full||d.n);
+  const pr=$('#prio'); pr.hidden=!['dart','chain','bomb','snipe','hero','drone','rail'].includes(t.s.kind); setText(pr,'Ziel: '+PRIO.find(p=>p[0]===t.prio)[1]);
+  let meta=d.desc;
+  if(t.s.income) meta=`Ertrag: ${fmt(t.s.income)} Kupfer pro Welle.`;
+  if(t.type==='akw') meta=`Ertrag: ${fmt(t.s.income)} Kupfer pro Welle. Strahlungspuls mit ${fmt(t.s.dmg)} Schaden, verstärkt alle Geräte im Umkreis stark.`;
+  setText($('#pMeta'),meta);
+  $('#pTags').innerHTML=d.hero?'':towerTags(t.type,t.s)+(t.s.buffed?'<span class="tag b">Trafo-Bonus</span>':'');
+  const sellV=fmt(t.spent*(perk('verkauf')?.8:.7));
+  setText($('#sell'),M('noSell',false)?'Verkauf gesperrt':`Verkaufen +${sellV}`);
+  $('#sell').disabled=M('noSell',false);
+  const fu=$('#fuse');
+  if(d.hero){
+    const L=t.hlv, nx=HERO_XP[L], pv=HERO_XP[L-1], pct=L>=10?100:Math.min(100,(t.xp-pv)/(nx-pv)*100);
+    $('#paths').innerHTML=`<div class="pcard" style="grid-column:1/-1"><div class="pc-h"><b>Stufe ${L} von 10</b><span class="pc-cur">${L>=10?'Maximal':fmt(t.xp)+' / '+fmt(nx)+' EP'}</span></div><div class="xpbar"><i style="width:${pct}%"></i></div>
+      <div class="hrow"><b>${heroAttackName()}</b><span>${heroAttackText(t.s)}</span></div>
+      <div class="hrow"><b>Ultra: ${HEROES[curHero].ultra}</b><span>${heroUltraText(L)} Aufladezeit ${Math.round(ultraCd(L))} s.</span></div></div>`;
+    fu.hidden=true; drawIcons(); return;
+  }
+  if(t.type==='akw'){
+    $('#paths').innerHTML=`<div class="pcard" style="grid-column:1/-1"><div class="pc-h"><b>Fusioniertes Kraftwerk</b></div><div class="pc-cur">Fähigkeit: ${ABIL.akw.n}. ${ABIL.akw.d}</div></div>`;
+    fu.hidden=true; drawIcons(); return;
+  }
+  $('#paths').innerHTML=d.paths.map((p,i)=>{
+    const lv=t.lv[i], pips=[0,1,2,3].map(j=>`<span class="${j<lv?'on'+(j>=2?' hi':''):''}"></span>`).join('');
+    const cur=lv?p.u[lv-1].n:'Basis';
+    let btn, cls='';
+    if(lv>=4){ btn=`<button disabled><span class="tx"><b>Voll ausgebaut</b></span></button>`; }
+    else if(!canUpgrade(t,i)){ cls='locked'; btn=`<button disabled><span class="tx"><b>${p.u[lv].n}</b><span>${t.lv[1-i]>2?'Gesperrt: anderer Pfad über Stufe 2':'In diesem Modus gesperrt'}</span></span></button>`; }
+    else { const u=p.u[lv], c=price(u.c); btn=`<button data-p="${i}" data-c="${c}" ${g.money<c?'disabled':''}><span class="tx"><b>${u.n}</b><span>${u.d}${lv===3?'. Fähigkeit: '+ABIL[t.type].n:''}</span></span><em>${fmt(c)}</em></button>`; }
+    return `<div class="pcard ${cls}"><div class="pc-h"><b>${p.n}</b><span class="pips">${pips}</span></div><div class="pc-cur">Stufe ${lv}: ${cur}</div>${btn}</div>`;
+  }).join('');
+  if(sq){ fu.hidden=false; fu.className=''; fu.innerHTML=`<p><b>Fusion möglich!</b> 2 Windräder und 2 Trafos stehen im Quadrat. Verschmelze sie zu einem Atomkraftwerk.</p><button id="fuseBtn">Atomkraftwerk bauen · ${fmt(price(FUSE_COST))}</button>`; $('#fuseBtn').addEventListener('click',()=>{ if(fuse(t)) panelKey=''; else toast('Zu wenig Kupfer'); }); }
+  else if(t.type==='windrad'||t.type==='trafo'){ fu.hidden=false; fu.className='tip'; fu.innerHTML=`<p>Tipp: Stell 2 Windräder und 2 Trafos in ein 2×2-Quadrat, dann kannst du sie zu einem <b>Atomkraftwerk</b> fusionieren.</p>`; }
+  else fu.hidden=true;
+  drawIcons();
 }
 function setText(el,v){ v=String(v); if(el._v!==v){ el._v=v; el.textContent=v; } }
 const fmt=n=>Math.floor(n).toLocaleString('de-DE');
 let panelKey='';
 function updateUI(){
   const g=G;
-  setText($('#lives'),fmt(g.lives)); setText($('#money'),fmt(g.money)); setText($('#wave'),g.wave);
-  towerBtns.forEach(b=>{ const k=b.dataset.k, h=TOWERS[k].hero; b.disabled=!g.running||(h&&g.hero?false:g.money<costOf(k))||(DAILY&&((DAILY.only&&!h&&!DAILY.only.includes(k))||(h&&DAILY.mod==='ohneheld'))); b.setAttribute('aria-pressed',String(g.build===k)); if(h){ const pe=b.querySelector('.p'); pe.classList.toggle('cu',!g.hero); setText(pe, g.hero?'Stufe '+g.hero.hlv:costOf(k)); } });
+  setText($('#lives'),fmt(g.lives)); setText($('#money'),fmt(g.money)); setText($('#wave'),(!MODE&&!g.freeplay)?`${g.wave}/${DIFFS[curDiff].goal}`:(MODE&&MODE.goal&&!g.chalDone&&MODE.kind!=='sandbox')?`${g.wave}/${MODE.goal}`:g.wave);
+  towerBtns.forEach(b=>{ const k=b.dataset.k, h=TOWERS[k].hero; b.disabled=!g.running||(h&&g.hero?false:g.money<costOf(k))||(!(h&&g.hero)&&!!ruleBlock(k)); b.setAttribute('aria-pressed',String(g.build===k)); if(h){ const pe=b.querySelector('.p'); pe.classList.toggle('cu',!g.hero); setText(pe, g.hero?'Stufe '+g.hero.hlv:costOf(k)); } });
   const ak=Object.keys(g.abil).join(',');
   const ab=$('#abils');
   if(ab._k!==ak){ ab._k=ak; ab.innerHTML=Object.keys(g.abil).map(k=>`<button class="ab" data-a="${k}" title="${ABIL[k].n}: ${ABIL[k].d}"><span class="in"><canvas data-ico="${k}"></canvas></span></button>`).join(''); drawIcons(); }
@@ -1659,57 +2072,44 @@ function updateUI(){
   const bb=$('#bossbar');
   if(g.boss && !g.boss.dead){ bb.hidden=false; setText($('#bossName'),g.boss.name+(g.boss.shield>0?' (geschirmt)':'')); const p=Math.max(0,g.boss.hp/g.boss.max); $('#bossFill').style.width=(p*100)+'%'; setText($('#bossPct'),Math.ceil(p*100)+' %'); }
   else bb.hidden=true;
-  // Upgrade-Panel
+  showBuildInfo();
+  // Ausbau-Panel: nur neu aufbauen, wenn sich am Gerät etwas ändert, nicht beim Kupfer
   const t=g.sel;
   panel.hidden=!t; bar.hidden=!!t;
-  const key=t?[t.id,t.lv.join(),Math.floor(g.money),t.prio,t.s.buffed,t.hlv,Math.floor((t.xp||0)/10)].join('|'):'';
-  if(key===panelKey) return;
-  panelKey=key; if(!t) return;
-  const d=TOWERS[t.type];
-  setText($('#pName'),d.full||d.n);
-  const pr=$('#prio'); pr.hidden=!['dart','chain','bomb','snipe','hero'].includes(t.s.kind); setText(pr,'Ziel: '+PRIO.find(p=>p[0]===t.prio)[1]);
-  let meta=d.desc;
-  if(t.s.income) meta=`Ertrag: ${fmt(t.s.income)} Kupfer pro Welle`;
-  const tags=[]; if(t.s.camo&&t.s.kind!=='farm'&&t.s.kind!=='buff') tags.push('sieht Getarnte'); if(t.s.iso&&t.s.kind!=='farm'&&t.s.kind!=='buff') tags.push('trifft Isolierte'); if(t.s.buffed) tags.push('vom Trafo verstärkt');
-  if(tags.length && !d.hero) meta+=' Kann: '+tags.join(', ')+'.';
-  setText($('#pMeta'),meta);
-  $('#sell').parentElement.hidden=false;
-  if(d.hero){
-    const L=t.hlv, nx=HERO_XP[L], pv=HERO_XP[L-1], pct=L>=10?100:Math.min(100,(t.xp-pv)/(nx-pv)*100);
-    $('#paths').innerHTML=`<div class="path hero-info"><span class="pn">Stufe ${L} von 10</span><span class="xp">${L>=10?'Maximal':fmt(t.xp)+' / '+fmt(nx)+' EP'}</span><div class="xpbar"><i style="width:${pct}%"></i></div>
-      <div class="hrow"><b>${heroAttackName()}</b><span>${heroAttackText(t.s)}</span></div>
-      <div class="hrow"><b>Ultra: ${HEROES[curHero].ultra}</b><span>${heroUltraText(L)} Aufladezeit ${ultraCd(L)} s.</span></div></div>`;
-    setText($('#sell'),`Verkaufen (+${fmt(t.spent*(perk('verkauf')?.8:.7))})`);
-    return;
-  }
-  $('#paths').innerHTML=d.paths.map((p,i)=>{
-    const lv=t.lv[i], pips=[0,1,2,3].map(j=>`<span class="${j<lv?'on'+(j>=2?' hi':''):''}"></span>`).join('');
-    let btn;
-    if(lv>=4) btn=`<button disabled><span class="tx"><b>Maximal ausgebaut</b></span></button>`;
-    else if(!canUpgrade(t,i)) btn=`<button disabled><span class="tx"><b>${p.u[lv].n}</b><span>Gesperrt: anderer Pfad schon über Stufe 2</span></span></button>`;
-    else { const u=p.u[lv], c=price(u.c); btn=`<button data-p="${i}" ${g.money<c?'disabled':''}><span class="tx"><b>${u.n}</b><span>${u.d}${lv===3?' Schaltet die Fähigkeit '+ABIL[t.type].n+' frei.':''}</span></span><em>${fmt(c)}</em></button>`; }
-    return `<div class="path"><span class="pn">${p.n}</span><div class="pips">${pips}</div>${btn}</div>`;
-  }).join('');
-  setText($('#sell'),`Verkaufen (+${fmt(t.spent*(perk('verkauf')?.8:.7))})`);
+  if(!t){ panelKey=''; return; }
+  const sq=fusionSquare(t);
+  const key=[t.id,t.lv.join(),t.prio,t.s.buffed,t.hlv,Math.floor((t.xp||0)/25),!!sq,M('noSell',false)].join('|');
+  if(key!==panelKey){ panelKey=key; buildPanel(t,sq); }
+  // laufend nur Zustände aktualisieren
+  $('#paths').querySelectorAll('button[data-p]').forEach(b=>{ b.disabled=g.money<+b.dataset.c; });
+  const fb=$('#fuseBtn'); if(fb) fb.disabled=g.money<price(FUSE_COST);
+
 }
 
 /* ================= Start / Ende ================= */
 const overlay=$('#overlay');
 let pick={map:curMap,diff:curDiff,hero:curHero};
+PROF.heroes=PROF.heroes||{};
 function applyMap(){ setupMap(); if(HAS3D){ buildBoard(); fitCamera(); } }
-function startGame(daily){
-  DAILY=daily||null;
-  if(DAILY){ pick={map:DAILY.map,diff:DAILY.diff,hero:DAILY.hero}; }
+function startGame(mode){
+  MODE=mode||null;
+  if(!heroUnlocked(pick.hero)) pick.hero='elektriker';
+  if(mode&&mode.hero&&!heroUnlocked(mode.hero)) mode.hero='elektriker';
+  if(MODE){ pick={map:MODE.map||pick.map,diff:MODE.diff||pick.diff,hero:MODE.hero||pick.hero}; }
   curMap=pick.map; curDiff=pick.diff; setHero(pick.hero);
   newGame(); applyMap(); renderBar();
-  G.running=true; G.hero=null; G.ultraCd=0; overlay.hidden=true;
-  if(!DAILY) clearSave();
-  if(DAILY){
-    if(DAILY.mod==='arm') G.money=400;
-    if(DAILY.mod==='spaet'){ G.wave=24; G.money=7000; }
-    toast(`Tagesaufgabe: ${DAILY.title}`);
+  G.running=true; G.hero=null; G.ultraCd=0; G.scrapGain=0; overlay.hidden=true; overlay.className='';
+  G.money+=150*shopLv('g.geld'); if(G.lives>1) G.lives+=25*shopLv('g.netz');
+  if(!MODE) clearSave();
+  if(MODE){
+    if(MODE.startMoney!==undefined) G.money=MODE.startMoney;
+    if(MODE.startWave) G.wave=MODE.startWave-1;
+    if(MODE.lives) G.lives=MODE.lives;
+    if(MODE.forceAuto){ G.auto=true; G.autoT=3; }
+    toast(MODE.kind==='sandbox'?'Sandbox: unendlich Kupfer und Netz':`${MODE.kind==='daily'?'Tagesaufgabe':'Herausforderung'}: ${MODE.title}`);
   }
-  stat('games',1);
+  $('#sandbox').hidden=!M('sandbox',false);
+  if(!M('sandbox',false)) stat('games',1);
 }
 function mapPreview(cv,id){
   const d=window.devicePixelRatio||1, w=cv.clientWidth||120, h=w*9/14; cv.width=w*d; cv.height=h*d; cv.style.height=h+'px';
@@ -1726,29 +2126,201 @@ const MEDALS=[[120,'Gold','#E8B700'],[80,'Silber','#ADB5BD'],[40,'Bronze','#C07A
 function bestFor(map,diff){ try{ return +localStorage.getItem(`netzschutz3d-best-${map}-${diff}`)||0; }catch(e){ return 0; } }
 function medalFor(w){ return MEDALS.find(m=>w>=m[0]); }
 function medalDots(map){ return Object.keys(DIFFS).map(d=>{ const m=medalFor(bestFor(map,d)); return `<i class="md" style="background:${m?m[2]:'var(--line)'}" title="${DIFFS[d].n}: ${m?m[1]:'keine Medaille'}"></i>`; }).join(''); }
+const CHALS=[
+  {id:'spaet',title:'Späteinsteiger',d:'Start bei Welle 25 mit 3.000 Kupfer.',map:'werkhalle',diff:'normal',startWave:25,startMoney:3000,goal:40,reward:120},
+  {id:'bossrush',title:'Bosskampf',d:'Start bei Welle 38 mit 12.000 Kupfer. Überlebe den ersten Boss.',map:'umspann',diff:'normal',startWave:38,startMoney:12000,goal:41,reward:200},
+  {id:'nurfunke',title:'Nur Funken',d:'Nur die Funke ist erlaubt (plus Held).',map:'spirale',diff:'normal',allow:['funke'],goal:30,reward:100},
+  {id:'gewitter',title:'Gewitterfront',d:'Nur Tesla-Spule und Magnet.',map:'werkhalle',diff:'normal',allow:['tesla','magnet'],goal:30,reward:120},
+  {id:'spar',title:'Sparfuchs',d:'Nur 200 Kupfer zum Start und kein Wellenbonus.',map:'spirale',diff:'normal',startMoney:200,noBonus:true,goal:25,reward:150},
+  {id:'einleben',title:'Ein Leben',d:'Ein einziger durchgelassener Gegner beendet das Spiel.',map:'baustelle',diff:'normal',lives:1,goal:30,reward:150},
+  {id:'kleinkram',title:'Kleinkram',d:'Geräte lassen sich höchstens auf Stufe 2 ausbauen.',map:'windpark',diff:'normal',maxTier:2,goal:35,reward:150},
+  {id:'keinzurueck',title:'Kein Zurück',d:'Kein Verkaufen und höchstens 8 Geräte.',map:'werkhalle',diff:'normal',noSell:true,maxTowers:8,goal:30,reward:130},
+  {id:'unsichtbar',title:'Unsichtbare Gefahr',d:'Alle kleinen Gegner sind getarnt.',map:'doppel',diff:'normal',camoAll:true,goal:25,reward:150},
+  {id:'turbo',title:'Turbostrom',d:'Alle Gegner sind 50 % schneller.',map:'spirale',diff:'normal',enemySpeed:1.5,goal:25,reward:150},
+  {id:'schwer',title:'Schwere Last',d:'Alle Gegner halten 60 % mehr aus.',map:'werkhalle',diff:'normal',enemyHp:1.6,goal:25,reward:150},
+  {id:'inflation',title:'Inflation',d:'Alles kostet 60 % mehr.',map:'baustelle',diff:'normal',priceMul:1.6,goal:30,reward:130},
+  {id:'heldentat',title:'Heldentat',d:'Keine Geräte, nur dein Held.',map:'spirale',diff:'leicht',allow:[],goal:15,reward:150},
+  {id:'pur',title:'Pures Handwerk',d:'Kein Held, keine Fähigkeiten.',map:'umspann',diff:'normal',noHero:true,noAbil:true,goal:35,reward:130},
+  {id:'fallen',title:'Fallensteller',d:'Nur Sicherungskasten und Kühlaggregat.',map:'werkhalle',diff:'normal',allow:['sicherung','kuehl'],goal:30,reward:150},
+  {id:'dauer',title:'Dauerbetrieb',d:'Die Wellen laufen ohne Pause automatisch.',map:'doppel',diff:'normal',forceAuto:true,goal:40,reward:150},
+  {id:'insel',title:'Inselkoller',d:'Kraftwerksinsel auf Schwer.',map:'insel',diff:'schwer',goal:35,reward:180},
+  {id:'dreifach',title:'Dreifacher Ärger',d:'Solarfeld mit höchstens 12 Geräten.',map:'solar',diff:'normal',maxTowers:12,goal:30,reward:180},
+  {id:'kurzsicht',title:'Kurzsichtig',d:'Alle Reichweiten sind um 25 % kleiner.',map:'kurz',diff:'normal',rangeMul:.75,goal:30,reward:180},
+  {id:'reich',title:'Reich, aber …',d:'20.000 Kupfer zum Start, aber Gegner halten 2,5-mal so viel aus.',map:'rechenz',diff:'normal',startMoney:20000,enemyHp:2.5,goal:40,reward:160},
+  {id:'heilung',title:'Selbstheilung',d:'Alle Gegner heilen sich selbst.',map:'windpark',diff:'normal',regenAll:true,goal:30,reward:150},
+  {id:'scharf',title:'Scharfschützen',d:'Nur Laser und Railgun.',map:'kurz',diff:'normal',allow:['laser','schiene'],goal:30,reward:140},
+  {id:'drohnen',title:'Luftüberlegenheit',d:'Nur Drohnen und Windräder.',map:'baustelle',diff:'normal',allow:['drohne','windrad'],goal:30,reward:150},
+  {id:'kupferregen',title:'Kupferregen',d:'Doppeltes Kupfer, aber 40 % schnellere Gegner.',map:'solar',diff:'schwer',incomeMul:2,enemySpeed:1.4,goal:35,reward:180},
+  {id:'ohneultra',title:'Ohne Netz und doppelten Boden',d:'Keine Ultra, keine Fähigkeiten, Schwer.',map:'rechenz',diff:'schwer',noUltra:true,noAbil:true,goal:40,reward:220},
+  {id:'marathon',title:'Marathon',d:'Halte bis Welle 100 durch.',map:'werkhalle',diff:'normal',goal:100,reward:500},
+  {id:'hoelle',title:'Höllenritt',d:'Unmöglich bis Welle 60.',map:'kurz',diff:'unmoeglich',goal:60,reward:700}
+];
+const SVG={
+  play:'<path d="M8 5l12 7-12 7z" fill="currentColor"/>',
+  trophy:'<path d="M7 4h10v4a5 5 0 0 1-10 0zM7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3M12 13v4M8 20h8"/>',
+  sand:'<path d="M3 18h18M5 18l3-7 3 4 3-6 5 9"/>',
+  wrench:'<path d="M14 6a4 4 0 0 0 5 5l-8 8a2 2 0 0 1-3-3l8-8a4 4 0 0 0-2-2z"/>',
+  cal:'<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>',
+  brain:'<path d="M12 5v14M8 6a3 3 0 0 0-3 5 3 3 0 0 0 3 5M16 6a3 3 0 0 1 3 5 3 3 0 0 1-3 5"/>',
+  star:'<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>',
+  list:'<path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/>',
+  box:'<path d="M3 8l9-4 9 4v9l-9 4-9-4z"/><path d="M3 8l9 4 9-4M12 12v9"/>',
+  help:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6M12 17h.01"/>',
+  back:'<path d="M15 6l-6 6 6 6"/>'
+};
+const ico=n=>`<svg viewBox="0 0 24 24" class="si">${SVG[n]}</svg>`;
+function scrapChip(){ return `<span class="scrap"><i></i>${fmt(PROF.scrap||0)}</span>`; }
 function showMenu(inGame){
   const sv=inGame?null:loadSave(), li=levelInfo(), fp=freePoints(), dl=dailyFor(new Date()), done=PROF.daily[dl.key];
-  overlay.innerHTML=`<div class="card">
-    <h2>Netzschutz 3D</h2>
+  const chalN=CHALS.filter(c=>PROF.chal[c.id]).length;
+  overlay.className='home';
+  overlay.innerHTML=`<div class="hub">
+    <div class="hubTop">
+      <div class="logo"><span class="lg"></span><div><b>Netzschutz 3D</b><small>Tower Defense</small></div></div>
+      ${scrapChip()}
+    </div>
     <button class="prof" id="mProf"><span class="lvl">${li.L}</span><span class="pt"><b>${rankName(li.L)}</b><span class="xpbar"><i style="width:${li.cur/li.need*100}%"></i></span><small>${fmt(li.cur)} / ${fmt(li.need)} EP${fp>0?` · ${fp} Wissenspunkt${fp>1?'e':''} frei`:''}</small></span></button>
-    <div class="menu">
-      ${sv?`<button class="primary" id="mCont">Weiterspielen<small>Welle ${sv.wave}, ${MAPS[sv.map].n}, ${DIFFS[sv.diff].n}</small></button>`:''}
-      <button class="${sv?'second':'primary'}" id="mNew">Neues Spiel</button>
-      <button class="second daily" id="mDaily">Tagesaufgabe<small>${done?'Heute geschafft':dl.title}</small></button>
-      <div class="menu row2"><button class="second" id="mAch">Erfolge</button><button class="second" id="mBoard">Bestenliste</button></div>
-      <button class="second" id="mHelp">So geht’s</button>
+    ${inGame?`<button class="bigPlay" id="mBack">${ico('play')}<span><b>Zurück zum Spiel</b><small>Welle ${G.wave}, ${MAPS[curMap].n}</small></span></button>`:''}
+    ${sv?`<button class="bigPlay" id="mCont">${ico('play')}<span><b>Weiterspielen</b><small>Welle ${sv.wave}, ${MAPS[sv.map].n}, ${DIFFS[sv.diff].n}</small></span></button>`:''}
+    <button class="bigPlay ${sv||inGame?'alt':''}" id="mNew">${ico('play')}<span><b>Neues Spiel</b><small>Karte, Schwierigkeit und Held wählen</small></span></button>
+    <div class="tiles">
+      <button class="tile t1" id="mChal">${ico('trophy')}<b>Herausforderungen</b><small>${chalN} von ${CHALS.length} geschafft</small></button>
+      <button class="tile t2" id="mShop">${ico('wrench')}<b>Werkstatt</b><small>${fmt(PROF.scrap||0)} Kabelreste · ${Object.keys(HEROES).filter(heroUnlocked).length}/10 Helden</small></button>
+      <button class="tile t3" id="mSand">${ico('sand')}<b>Sandbox</b><small>Alles ausprobieren</small></button>
+      <button class="tile t4" id="mDaily">${ico('cal')}<b>Tagesaufgabe</b><small>${done?'Heute geschafft':dl.title}</small></button>
+      <button class="tile t5" id="mProf2">${ico('brain')}<b>Wissen</b><small>${fp>0?fp+' Punkte frei':'Spielerstufe '+li.L}</small></button>
+      <button class="tile t6" id="mAch">${ico('star')}<b>Erfolge</b><small>${ACH.filter(a=>PROF.ach[a[0]]).length} von ${ACH.length}</small></button>
+      <button class="tile t9" id="mBox">${ico('box')}<b>Kisten</b><small>${(PROF.boxes||[]).length?(PROF.boxes.length+' ungeöffnet'):'Keine Kisten'}</small>${(PROF.boxes||[]).length?`<span class="badge">${PROF.boxes.length}</span>`:''}</button>
+      <button class="tile t7" id="mBoard">${ico('list')}<b>Bestenliste</b><small>Rekorde</small></button>
+      <button class="tile t8" id="mHelp">${ico('help')}<b>So geht’s</b><small>Anleitung</small></button>
     </div>
   </div>`;
   overlay.hidden=false;
-  if(sv) $('#mCont').addEventListener('click',()=>{ sfx('click'); continueGame(sv); });
-  $('#mNew').addEventListener('click',()=>{ sfx('click'); showSetup(); });
-  $('#mDaily').addEventListener('click',()=>{ sfx('click'); showDaily(); });
-  $('#mProf').addEventListener('click',()=>{ sfx('click'); showProfile(); });
-  $('#mAch').addEventListener('click',()=>{ sfx('click'); showAch(); });
-  $('#mBoard').addEventListener('click',()=>{ sfx('click'); showBoard(); });
-  $('#mHelp').addEventListener('click',()=>{ sfx('click'); showHelp(); });
+  const on=(id,f)=>{ const b=$('#'+id); if(b) b.addEventListener('click',()=>{ sfx('click'); f(); }); };
+  on('mBack',()=>{ overlay.hidden=true; overlay.className=''; G.paused=false; });
+  if(sv) on('mCont',()=>continueGame(sv));
+  on('mNew',showSetup); on('mChal',showChallenges); on('mShop',()=>showShop('geraete')); on('mSand',showSandbox);
+  on('mDaily',showDaily); on('mBox',showBoxes); on('mProf',showProfile); on('mProf2',showProfile); on('mAch',showAch); on('mBoard',showBoard); on('mHelp',showHelp);
+}
+function subPage(title,body,wide){
+  overlay.className='home';
+  overlay.innerHTML=`<div class="hub ${wide?'wide':''}"><div class="hubTop"><button class="backBtn" id="pgBack">${ico('back')}<span>Zurück</span></button>${scrapChip()}</div><h2 class="pgTitle">${title}</h2>${body}</div>`;
+  overlay.hidden=false;
+  $('#pgBack').addEventListener('click',()=>{ sfx('click'); showMenu(G.running); });
+}
+function heroOpts(cls){
+  return `<div class="opts heroes ${cls||''}">${Object.entries(HEROES).map(([k,h])=>{ const ok=heroUnlocked(k);
+    return `<button class="opt ${ok?'':'lockd'}" data-g="hero" data-v="${k}" ${ok?'':'data-locked="1"'}><canvas data-ico="${k}"></canvas><b>${cls?h.n:h.full}</b>${cls?'':`<span>${h.desc} Ultra: ${h.ultra}.</span>`}${ok?'':`<span class="lk"><i></i>${h.unlock}</span>`}</button>`; }).join('')}</div>`;
+}
+function bindHeroOpts(mark){
+  overlay.querySelectorAll('.opt[data-g=hero]').forEach(b=>{ b.onclick=null; b.addEventListener('click',ev=>{ if(b.dataset.locked){ ev.stopImmediatePropagation(); toast(`In der Werkstatt freischalten: ${HEROES[b.dataset.v].unlock} Kabelreste`); } },true); });
+}
+/* ---- Werkstatt ---- */
+const SHOP_DESC={windrad:{dmg:'+10 % Ertrag',range:'Kein Effekt',speed:'Kein Effekt'},trafo:{dmg:'Verstärkt Geräte 2 % mehr',range:'+5 % Wirkbereich',speed:'Geräte noch etwas schneller'},kuehl:{dmg:'+10 % Frostdauer'},magnet:{dmg:'Mehr Schaden und Bremswirkung'}};
+function showShop(tab){
+  const sc=PROF.scrap||0;
+  let body=`<p class="small">Kabelreste bekommst du für jede geschaffte Welle, für Medaillen, Herausforderungen und Tagesaufgaben. Verbesserungen gelten dauerhaft in jedem Spiel.</p>
+    <div class="tabs"><button class="tab" data-tab="geraete" aria-pressed="${tab==='geraete'}">Geräte</button><button class="tab" data-tab="helden" aria-pressed="${tab==='helden'}">Helden</button><button class="tab" data-tab="allgemein" aria-pressed="${tab==='allgemein'}">Allgemein</button></div>`;
+  if(tab==='geraete'){
+    body+=`<div class="shopList">${KEYS.filter(k=>k!=='held').map(k=>`<div class="shopItem"><div class="si-h"><canvas data-ico="${k}"></canvas><b>${TOWERS[k].full||TOWERS[k].n}</b></div>
+      ${SHOP_TRACKS.filter(([tr])=>!(k==='windrad'&&tr!=='dmg')).map(([tr,n,d])=>{ d=(SHOP_DESC[k]&&SHOP_DESC[k][tr])||d; const key=k+'.'+tr, lv=shopLv(key), c=shopCost(lv,3); return `<div class="tr"><span><b>${n}</b><small>${d} je Stufe</small></span><span class="pips">${[0,1,2,3,4].map(i=>`<span class="${i<lv?'on':''}"></span>`).join('')}</span><button class="buy" data-key="${key}" data-cost="${c}" ${lv>=5||sc<c?'disabled':''}>${lv>=5?'Max':`<i></i>${fmt(c)}`}</button></div>`; }).join('')}</div>`).join('')}</div>`;
+  } else if(tab==='helden'){
+    body+=`<div class="shopList">${Object.entries(HEROES).map(([k,h])=>{ const ok=heroUnlocked(k); return `<div class="shopItem heroItem ${ok?'own':''}"><div class="si-h"><canvas data-ico="${k}"></canvas><span><b>${h.full}</b><small>${h.desc}</small></span></div><div class="hu"><span><b>Ultra: ${h.ultra}</b><small>${h.ultraD}</small></span>${ok?`<span class="owned">${h.unlock?'Freigeschaltet':'Startheld'}</span>`:`<button class="buy" data-hero="${k}" data-cost="${h.unlock}" ${sc<h.unlock?'disabled':''}><i></i>${fmt(h.unlock)}</button>`}</div><small class="hc">Kostet im Spiel ${fmt(h.cost)} Kupfer</small></div>`; }).join('')}</div>`;
+  } else {
+    body+=`<div class="shopList">${Object.entries(SHOP_GENERAL).map(([k,g])=>{ const key='g.'+k, lv=shopLv(key), c=shopCost(lv,5); return `<div class="shopItem"><div class="tr"><span><b>${g.n}</b><small>${g.d} je Stufe</small></span><span class="pips">${Array.from({length:g.max},(_,i)=>`<span class="${i<lv?'on':''}"></span>`).join('')}</span><button class="buy" data-key="${key}" data-cost="${c}" ${lv>=g.max||sc<c?'disabled':''}>${lv>=g.max?'Max':`<i></i>${fmt(c)}`}</button></div></div>`; }).join('')}</div>`;
+  }
+  subPage('Werkstatt',body,true);
+  overlay.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{ sfx('click'); showShop(b.dataset.tab); }));
+  overlay.querySelectorAll('.buy[data-hero]').forEach(b=>b.addEventListener('click',()=>{
+    const c=+b.dataset.cost, k=b.dataset.hero; if((PROF.scrap||0)<c||heroUnlocked(k)) return;
+    PROF.scrap-=c; PROF.heroes[k]=true; saveProf(); sfx('level'); toast(`${HEROES[k].full} freigeschaltet!`); checkAchQuiet();
+    const y=overlay.scrollTop; showShop(tab); overlay.scrollTop=y;
+  }));
+  overlay.querySelectorAll('.buy[data-key]').forEach(b=>b.addEventListener('click',()=>{
+    const c=+b.dataset.cost, k=b.dataset.key; if((PROF.scrap||0)<c) return;
+    PROF.scrap-=c; PROF.shop[k]=(PROF.shop[k]||0)+1; saveProf(); sfx('upgrade');
+    if(G.running) recalc();
+    const y=overlay.scrollTop; showShop(tab); overlay.scrollTop=y;
+  }));
+  drawIcons();
+}
+/* ---- Herausforderungen ---- */
+function chalRules(c){
+  const r=[];
+  if(c.startWave) r.push(`Start Welle ${c.startWave}`); if(c.startMoney!==undefined) r.push(`${fmt(c.startMoney)} Kupfer`);
+  if(c.lives) r.push(`${c.lives} Leben`); if(c.allow) r.push(c.allow.length?'Nur '+c.allow.map(k=>TOWERS[k].n).join(', '):'Nur Held');
+  if(c.maxTier) r.push(`Max. Stufe ${c.maxTier}`); if(c.maxTowers) r.push(`Max. ${c.maxTowers} Geräte`); if(c.noSell) r.push('Kein Verkauf');
+  if(c.noHero) r.push('Kein Held'); if(c.noAbil) r.push('Keine Fähigkeiten'); if(c.noUltra) r.push('Keine Ultra');
+  if(c.enemySpeed) r.push(`Gegner +${Math.round((c.enemySpeed-1)*100)} % Tempo`); if(c.enemyHp) r.push(`Gegner ×${String(c.enemyHp).replace('.',',')} Leben`);
+  if(c.priceMul) r.push(`Preise +${Math.round((c.priceMul-1)*100)} %`); if(c.incomeMul) r.push(`Kupfer ×${c.incomeMul}`); if(c.noBonus) r.push('Kein Wellenbonus');
+  if(c.camoAll) r.push('Alles getarnt'); if(c.regenAll) r.push('Alles heilt sich'); if(c.rangeMul) r.push('Reichweite −25 %'); if(c.forceAuto) r.push('Ohne Pause');
+  return r;
+}
+function showChallenges(){
+  const n=CHALS.filter(c=>PROF.chal[c.id]).length;
+  const body=`<p class="small">${n} von ${CHALS.length} geschafft. Beim ersten Mal gibt es die volle Belohnung, danach ein Viertel davon.</p>
+    <div class="chals">${CHALS.map(c=>`<button class="chal ${PROF.chal[c.id]?'done':''}" data-id="${c.id}">
+      <span class="ch-top"><b>${c.title}</b><span class="rw"><i></i>${chalReward(c)}</span></span>
+      <span class="ch-d">${c.d}</span>
+      <span class="ch-tags"><em>${MAPS[c.map].n}</em><em>${DIFFS[c.diff].n}</em><em>Ziel: Welle ${c.goal}</em>${PROF.chal[c.id]?'<em class="ok">Geschafft</em>':''}</span>
+    </button>`).join('')}</div>`;
+  subPage('Herausforderungen',body,true);
+  overlay.querySelectorAll('.chal').forEach(b=>b.addEventListener('click',()=>{ sfx('click'); showChal(CHALS.find(c=>c.id===b.dataset.id)); }));
+}
+function showChal(c){
+  const body=`<p>${c.d}</p>
+    <canvas data-map="${c.map}" class="dprev"></canvas>
+    <div class="ch-tags big">${chalRules(c).map(r=>`<em>${r}</em>`).join('')}</div>
+    <p>Karte: ${MAPS[c.map].n} · ${DIFFS[c.diff].n} · Ziel: Welle ${c.goal}<br>Belohnung: ${PROF.chal[c.id]?chalRepeat(c)+' Kabelreste (Wiederholung)':chalReward(c)+' Kabelreste, 1.000 EP und eine Kiste'}</p>
+    ${c.noHero||(c.allow&&!c.allow.length&&false)?'':`<h4>Held</h4>${heroOpts('small3')}`}
+    <div class="menu row"><button class="second" id="cBack">Liste</button><button class="primary" id="cGo">Starten</button></div>`;
+  subPage(c.title,body);
+  const mark=()=>overlay.querySelectorAll('.opt').forEach(b=>b.setAttribute('aria-pressed',String(pick.hero===b.dataset.v)));
+  bindHeroOpts();
+  overlay.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{ sfx('click'); pick.hero=b.dataset.v; mark(); }));
+  overlay.querySelectorAll('canvas[data-map]').forEach(cv=>mapPreview(cv,cv.dataset.map));
+  drawIcons(); mark();
+  $('#cBack').addEventListener('click',showChallenges);
+  $('#cGo').addEventListener('click',()=>{ sfx('wave'); overlay.className=''; startGame(Object.assign({kind:'chal',hero:pick.hero},c)); });
+}
+/* ---- Sandbox ---- */
+function showSandbox(){
+  const body=`<p>Unendlich Kupfer, unendlich Netz. Probier Geräte und Kombinationen aus, schick Gegner deiner Wahl los und spring zu jeder Welle. Hier gibt es keine Belohnungen.</p>
+    <h4>Karte</h4><div class="opts maps">${Object.entries(MAPS).map(([k,m])=>`<button class="opt" data-g="map" data-v="${k}"><canvas data-map="${k}"></canvas><b>${m.n}</b></button>`).join('')}</div>
+    <h4>Held</h4>${heroOpts('small3')}
+    <div class="menu"><button class="primary" id="sbGo">Sandbox starten</button></div>`;
+  subPage('Sandbox',body,true);
+  const mark=()=>overlay.querySelectorAll('.opt').forEach(b=>b.setAttribute('aria-pressed',String(pick[b.dataset.g]===b.dataset.v)));
+  bindHeroOpts();
+  overlay.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{ sfx('click'); pick[b.dataset.g]=b.dataset.v; mark(); }));
+  overlay.querySelectorAll('canvas[data-map]').forEach(cv=>mapPreview(cv,cv.dataset.map));
+  drawIcons(); mark();
+  $('#sbGo').addEventListener('click',()=>{ sfx('wave'); overlay.className=''; startGame({kind:'sandbox',sandbox:true,title:'Sandbox',diff:'normal',startMoney:9999999,lives:999999}); });
+}
+const SB_ENEMIES=['impuls','puls2','spitze','welle','flimmer','spannung','iso','keramik','stoer','block','grosslast','mega','boss'];
+function initSandboxPanel(){
+  const el=$('#sandbox');
+  el.innerHTML=`<button class="sbToggle" id="sbToggle">Sandbox</button><div class="sbBody" id="sbBody" hidden>
+    <label>Gegner<select id="sbEnemy">${SB_ENEMIES.map(k=>`<option value="${k}">${ENEMY[k].n}</option>`).join('')}</select></label>
+    <div class="sbRow"><label class="ck"><input type="checkbox" id="sbCamo">Getarnt</label><label class="ck"><input type="checkbox" id="sbRegen">Heilend</label><label class="ck"><input type="checkbox" id="sbFort">Gepanzert</label></div>
+    <div class="sbRow"><button data-n="1">×1</button><button data-n="10">×10</button><button data-n="50">×50</button></div>
+    <div class="sbRow"><button id="sbWm">Welle −5</button><span id="sbW"></span><button id="sbWp">Welle +5</button></div>
+    <div class="sbRow"><button id="sbClear">Feld leeren</button><button id="sbReset">Abklingzeiten zurück</button></div>
+  </div>`;
+  $('#sbToggle').addEventListener('click',()=>{ $('#sbBody').hidden=!$('#sbBody').hidden; });
+  el.querySelectorAll('button[data-n]').forEach(b=>b.addEventListener('click',()=>{
+    if(!G.running) return; const k=$('#sbEnemy').value, n=+b.dataset.n, pi0=Math.floor(Math.random()*PATHS.length);
+    if(G.wave<1) G.wave=1;
+    for(let i=0;i<n;i++) spawnEnemy(k,-i*.35,$('#sbCamo').checked,(pi0+i)%PATHS.length,{regen:$('#sbRegen').checked,fort:$('#sbFort').checked});
+    G.active=true; sfx('click');
+  }));
+  const setW=d=>{ G.wave=Math.max(0,G.wave+d); setText($('#sbW'),'Welle '+G.wave); };
+  $('#sbWm').addEventListener('click',()=>setW(-5)); $('#sbWp').addEventListener('click',()=>setW(5));
+  $('#sbClear').addEventListener('click',()=>{ G.enemies.forEach(e=>{ e.dead=true; removeEnemyMesh(e); }); G.enemies=[]; G.queue=[]; G.boss=null; });
+  $('#sbReset').addEventListener('click',()=>{ G.ultraCd=0; for(const k in G.abil) G.abil[k].cd=0; });
 }
 function showHelp(){
+  overlay.className='';
   overlay.innerHTML=`<div class="card">
     <h2>So geht’s</h2>
     <ul>
@@ -1759,26 +2331,35 @@ function showHelp(){
       <li>Ab Welle 40 kommen Bosse. Erreicht ein Boss den Verteiler, ist das Spiel vorbei.</li>
       <li>Jede Welle bringt Erfahrung für deine Spielerstufe. Pro Stufe gibt es einen Wissenspunkt für dauerhafte Vorteile.</li>
       <li>Medaillen: Bronze ab Welle 40, Silber ab 80, Gold ab 120, für jede Karte und Schwierigkeit.</li>
+      <li>Jede Schwierigkeit hat ein Ziel: Leicht bis Welle 40 (10 Kabelreste), Normal bis 50 (20), Schwer bis 80 (50), Unmöglich bis 120 (80). Erst wenn du das Ziel schaffst, gibt es Kabelreste und mit etwas Glück eine Kiste. Danach kannst du aufhören oder ohne weitere Belohnungen weiterspielen.</li>
+      <li>Kabelreste gibt es außerdem für Herausforderungen und Tagesaufgaben. Damit kaufst du in der Werkstatt Verbesserungen und neue Helden.</li>
+      <li>Kisten enthalten Kabelreste, Erfahrung, Gratis-Werkstattstufen und manchmal einen Helden.</li>
+      <li>In der Sandbox hast du unendlich Kupfer und Netz und kannst Gegner selbst losschicken.</li>
+      <li><b>Atomkraftwerk:</b> Stell 2 Windräder und 2 Trafos in ein 2×2-Quadrat, tippe eines davon an und fusioniere sie für 12.000 Kupfer. Das Kraftwerk bringt 2.500 Kupfer pro Welle, verstärkt alle Geräte in großem Umkreis und hat die Fähigkeit Kernschmelze.</li>
     </ul>
     <button class="primary" id="back">Zurück</button>
   </div>`;
   $('#back').addEventListener('click',()=>showMenu());
 }
 function showSetup(){
+  overlay.className='';
   overlay.innerHTML=`<div class="card wide">
     <h2>Neues Spiel</h2>
     <h4>Karte</h4>
-    <div class="opts maps">${Object.entries(MAPS).map(([k,m])=>`<button class="opt" data-g="map" data-v="${k}"><canvas data-map="${k}"></canvas><b>${m.n}</b><span>${m.lvl}. ${m.d}</span><span class="mds">${medalDots(k)}</span></button>`).join('')}</div>
+    <div class="opts maps">${Object.entries(MAPS).map(([k,m])=>`<button class="opt" data-g="map" data-v="${k}"><canvas data-map="${k}"></canvas><b>${m.n}</b><span>${m.lvl}. ${m.d}</span><span class="mapRw"></span><span class="mds">${medalDots(k)}</span></button>`).join('')}</div>
     <h4>Schwierigkeit</h4>
-    <div class="opts diffs">${Object.entries(DIFFS).map(([k,d])=>`<button class="opt chipopt" data-g="diff" data-v="${k}"><b>${d.n}</b><span>${d.lives===1?'1 Leben':d.lives+' Netz'}</span></button>`).join('')}</div>
+    <div class="opts diffs">${Object.entries(DIFFS).map(([k,d])=>`<button class="opt chipopt" data-g="diff" data-v="${k}"><b>${d.n}</b><span>${d.lives===1?'1 Leben':d.lives+' Netz'}</span><span class="dRw"><i></i>${d.scrap}</span><span>bis Welle ${d.goal}</span></button>`).join('')}</div>
     <h4>Held</h4>
-    <div class="opts heroes">${Object.entries(HEROES).map(([k,h])=>`<button class="opt" data-g="hero" data-v="${k}"><canvas data-ico="${k}"></canvas><b>${h.full}</b><span>${h.desc} Ultra: ${h.ultra}.</span></button>`).join('')}</div>
+    ${heroOpts('small3')}<p class="small" id="heroDesc"></p>
     <div class="best" id="setupBest"></div>
     <div class="menu row"><button class="second" id="sBack">Zurück</button><button class="primary" id="sGo">Los geht’s</button></div>
   </div>`;
   const mark=()=>{ overlay.querySelectorAll('.opt').forEach(b=>b.setAttribute('aria-pressed',String(pick[b.dataset.g]===b.dataset.v)));
-    const b=bestFor(pick.map,pick.diff), m=medalFor(b);
+    const b=bestFor(pick.map,pick.diff), m=medalFor(b), D=DIFFS[pick.diff];
+    overlay.querySelectorAll('.mapRw').forEach(el=>{ el.innerHTML=`<em><i></i>${D.scrap} Kabelreste</em><small>bis Welle ${D.goal}, ${Math.round(D.box*100)} % Kiste</small>`; });
+    { const h=HEROES[pick.hero]; $('#heroDesc').textContent=`${h.full}: ${h.desc} Ultra: ${h.ultra}. Kostet ${fmt(h.cost)} Kupfer im Spiel.`; }
     $('#setupBest').textContent=b?`Dein Bestwert hier: Welle ${b}${m?' ('+m[1]+')':''}`:'Hier hast du noch nicht gespielt.'; };
+  bindHeroOpts();
   overlay.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{ sfx('click'); pick[b.dataset.g]=b.dataset.v; mark(); }));
   overlay.querySelectorAll('canvas[data-map]').forEach(cv=>mapPreview(cv,cv.dataset.map));
   drawIcons(); mark();
@@ -1787,6 +2368,7 @@ function showSetup(){
 }
 
 /* ---- Fortschritt ---- */
+function addScrap(n,flat){ n=Math.round(n*(flat?1:1+.1*shopLv('g.rest'))); PROF.scrap=(PROF.scrap||0)+n; G.scrapGain=(G.scrapGain||0)+n; stat('scrap',n); saveProf(); return n; }
 function stat(k,n){ PROF.stats[k]=(PROF.stats[k]||0)+n; }
 const DIFF_XP={leicht:.8,normal:1,schwer:1.3,unmoeglich:1.8};
 function gainXp(x,why){
@@ -1808,12 +2390,16 @@ const ACH=[
   ['ult50','Ultra-Fan','Löse insgesamt 50 Ultras aus.',800,()=>PROF.stats.ultras>=50],
   ['maps','Weltenbummler','Schaffe auf jeder Karte Welle 20.',3000,()=>Object.keys(MAPS).every(m=>Object.keys(DIFFS).some(d=>bestFor(m,d)>=20))],
   ['unm','Unmöglich?','Schaffe Welle 20 auf Unmöglich.',2500,()=>curDiff==='unmoeglich'&&G.wave>=20&&!G.active],
-  ['heroes','Teamwork','Bring alle drei Helden auf Stufe 10.',3000,()=>Object.keys(HEROES).every(h=>(PROF.heroMax[h]||0)>=10)],
+  ['heroes','Teamwork','Bring drei verschiedene Helden auf Stufe 10.',3000,()=>Object.keys(HEROES).filter(h=>(PROF.heroMax[h]||0)>=10).length>=3],
+  ['allheroes','Personalabteilung','Schalte alle 10 Helden frei.',3000,()=>Object.keys(HEROES).every(heroUnlocked)],
   ['rich','Kupfermagnat','Hab 100.000 Kupfer auf einmal.',1500,()=>G.money>=100000],
   ['daily5','Tagesgeschäft','Schaffe 5 Tagesaufgaben.',2000,()=>Object.keys(PROF.daily).length>=5],
   ['perfect','Fehlerfrei','Schaffe Welle 40, ohne Netz zu verlieren.',2500,()=>G.wave>=40&&!G.active&&!G.lostLives],
+  ['box10','Kistenjäger','Öffne 10 Kisten.',800,()=>PROF.stats.boxes>=10],
+  ['win','Feierabend','Schließe ein Spiel auf Normal oder schwerer ab.',1000,()=>G.won&&curDiff!=='leicht'],
   ['gold','Goldjunge','Hol eine Goldmedaille.',4000,()=>Object.keys(MAPS).some(m=>Object.keys(DIFFS).some(d=>bestFor(m,d)>=120))]
 ];
+function checkAchQuiet(){ try{ if(Object.keys(HEROES).every(heroUnlocked)&&!PROF.ach.allheroes){ PROF.ach.allheroes=Date.now(); gainXp(3000); toast('Erfolg: Personalabteilung (+3000 EP)'); } }catch(e){} saveProf(); }
 function checkAch(){
   for(const [id,n,,xp,fn] of ACH){ if(PROF.ach[id]) continue; let ok=false; try{ ok=fn(); }catch(e){} if(ok){ PROF.ach[id]=Date.now(); toast(`Erfolg: ${n} (+${xp} EP)`); sfx('done'); gainXp(xp); } }
   saveProf();
@@ -1824,11 +2410,89 @@ function onWaveDone(){
   if(G.bossKills){ stat('bosses',G.bossKills); G.bossKills=0; }
   if(G.ultras){ stat('ultras',G.ultras); G.ultras=0; }
   if(G.hero) PROF.heroMax[curHero]=Math.max(PROF.heroMax[curHero]||0,G.hero.hlv);
+  if(M('sandbox',false)) return;
   gainXp((10+w*2)*DIFF_XP[curDiff]*(w%40===0?3:1));
-  if(DAILY && !PROF.daily[DAILY.key] && w>=DAILY.goal){ PROF.daily[DAILY.key]=1; toast(`Tagesaufgabe geschafft! +1500 EP`); sfx('level'); gainXp(1500); }
+  // Normales Spiel: Belohnung nur beim Erreichen der letzten Welle
+  if(!MODE && !G.won && w>=DIFFS[curDiff].goal){
+    G.won=true; const D=DIFFS[curDiff];
+    const sc=addScrap(D.scrap);
+    const box=Math.random()<D.box?rollBox(D.boxR[Math.floor(Math.random()*D.boxR.length)]):null;
+    stat('wins',1); saveBest(w);
+    showWin({title:'Netz gesichert!',text:`Du hast alle ${D.goal} Wellen auf ${D.n} geschafft.`,scrap:sc,box,canGoOn:true});
+  }
+  if(MODE&&MODE.kind==='chal'&&!G.chalDone&&w>=MODE.goal){
+    G.chalDone=true; const first=!PROF.chal[MODE.id]; PROF.chal[MODE.id]=1;
+    const sc=addScrap(first?chalReward(MODE):chalRepeat(MODE)); gainXp(first?1000:200);
+    const box=first?rollBox(MODE.goal>=60?'episch':MODE.goal>=35?'selten':'normal'):null;
+    showWin({title:'Herausforderung geschafft!',text:MODE.title,scrap:sc,box,canGoOn:true});
+  }
+  if(MODE && MODE.kind==='daily' && !G.chalDone && w>=MODE.goal){
+    G.chalDone=true; const first=!PROF.daily[MODE.key]; PROF.daily[MODE.key]=1;
+    let sc=0, box=null; if(first){ gainXp(1500); sc=addScrap(20); box=rollBox('selten'); }
+    showWin({title:'Tagesaufgabe geschafft!',text:first?MODE.title:'Heute schon erledigt, diesmal ohne Belohnung.',scrap:sc,box,canGoOn:true});
+  }
   checkAch();
 }
+const chalReward=c=>Math.max(10,Math.round(c.reward/25)*5);
+const chalRepeat=c=>Math.max(5,Math.round(chalReward(c)/4/5)*5);
+/* ---- Sieg-Fenster ---- */
+function showWin(o){
+  G.paused=true; saveProf();
+  const pop=$('#winPop');
+  pop.innerHTML=`<div class="winCard"><div class="burst"></div><h2>${o.title}</h2><p>${o.text}</p>
+    <div class="loot">${o.scrap?`<div class="lootItem"><span class="scrapBig"><i></i></span><b>+${fmt(o.scrap)}</b><small>Kabelreste</small></div>`:''}
+    ${o.box?`<div class="lootItem"><span class="boxIco r-${o.box.r}"></span><b>${BOXES[o.box.r].n}</b><small>Neue Kiste!</small></div>`:''}
+    ${!o.scrap&&!o.box?'<p class="small">Keine Belohnung.</p>':''}</div>
+    ${o.canGoOn?'<p class="small">Du kannst weiterspielen, bekommst danach aber keine Kabelreste oder Kisten mehr.</p>':''}
+    <div class="menu">${o.canGoOn?'<button class="primary" id="wGo">Weiterspielen</button>':''}${o.box?'<button class="second" id="wBox">Kiste öffnen</button>':''}<button class="second" id="wStop">Aufhören</button></div></div>`;
+  pop.hidden=false; sfx('level');
+  const close=()=>{ pop.hidden=true; };
+  if(o.canGoOn) $('#wGo').addEventListener('click',()=>{ close(); G.freeplay=true; G.paused=false; toast('Freispiel: keine weiteren Belohnungen'); });
+  if(o.box) $('#wBox').addEventListener('click',()=>{ close(); endRun(); showBoxes(); });
+  $('#wStop').addEventListener('click',()=>{ close(); endRun(); showMenu(); });
+}
+function endRun(){
+  if(!G.running) return;
+  G.running=false; G.build=null; G.sel=null; G.ghost=null;
+  if(!MODE) saveBest(G.wave);
+  clearSave(); saveProf();
+}
+/* ---- Kisten ---- */
+const BOXES={normal:{n:'Werkzeugkiste',items:2,col:'#868E96'},selten:{n:'Seltene Kiste',items:3,col:'#339AF0'},episch:{n:'Epische Kiste',items:4,col:'#9775FA'}};
+function rollBox(r){ const b={r,id:Date.now()+Math.random()}; PROF.boxes=PROF.boxes||[]; PROF.boxes.push(b); saveProf(); return b; }
+function lootRoll(r){
+  const q=r==='episch'?2:r==='selten'?1.4:1, x=Math.random();
+  const locked=Object.keys(HEROES).filter(k=>!heroUnlocked(k));
+  if(locked.length && x<.06*q){ const k=locked[Math.floor(Math.random()*locked.length)]; PROF.heroes[k]=true; return {t:'held',k,n:HEROES[k].full,d:'Held freigeschaltet!',rare:true}; }
+  if(x<.06*q+.22){ const opts=[]; KEYS.filter(k=>k!=='held').forEach(k=>SHOP_TRACKS.forEach(([tr,n])=>{ if(shopLv(k+'.'+tr)<5&&!(k==='windrad'&&tr!=='dmg')) opts.push([k,tr,n]); }));
+    if(opts.length){ const [k,tr,n]=opts[Math.floor(Math.random()*opts.length)]; PROF.shop[k+'.'+tr]=shopLv(k+'.'+tr)+1; return {t:'shop',k,n:`${TOWERS[k].n}: ${n} +1`,d:'Gratis-Werkstattstufe'}; } }
+  if(x<.06*q+.22+.15){ const xp=Math.round((300+Math.random()*400)*q); gainXp(xp); return {t:'xp',n:`+${fmt(xp)} EP`,d:'Erfahrung'}; }
+  const sc=Math.round((3+Math.random()*12)*q*(Math.random()<.1?3:1)); PROF.scrap=(PROF.scrap||0)+sc; stat('scrap',sc); return {t:'scrap',n:`+${sc} Kabelreste`,d:'Kabelreste'};
+}
+function openBox(idx){
+  const b=PROF.boxes[idx]; if(!b) return null;
+  PROF.boxes.splice(idx,1);
+  const items=[]; for(let i=0;i<BOXES[b.r].items;i++) items.push(lootRoll(b.r));
+  stat('boxes',1); saveProf(); checkAchQuiet();
+  return {b,items};
+}
+function showBoxes(){
+  const bx=PROF.boxes||[];
+  const counts={normal:0,selten:0,episch:0}; bx.forEach(b=>counts[b.r]++);
+  const body=`<p class="small">Kisten bekommst du mit etwas Glück, wenn du ein Spiel abschließt (je schwerer, desto besser), und für Herausforderungen und Tagesaufgaben. Drin sind Kabelreste, Erfahrung, Gratis-Werkstattstufen und mit Glück sogar ein Held.</p>
+    <div class="boxGrid">${Object.entries(BOXES).map(([r,B])=>`<div class="boxCard r-${r}"><span class="boxIco r-${r}"></span><b>${B.n}</b><small>${B.items} Gegenstände</small><em>${counts[r]}×</em><button class="primary" data-open="${r}" ${counts[r]?'':'disabled'}>Öffnen</button></div>`).join('')}</div>
+    <div id="lootOut"></div>`;
+  subPage('Kisten',body,true);
+  overlay.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>{
+    const idx=PROF.boxes.findIndex(x=>x.r===b.dataset.open); const res=openBox(idx); if(!res) return;
+    sfx('upgrade');
+    const out=`<div class="opening r-${res.b.r}"><span class="boxIco big r-${res.b.r} shake"></span></div>`;
+    $('#lootOut').innerHTML=out; overlay.querySelectorAll('[data-open]').forEach(x=>x.disabled=true);
+    setTimeout(()=>{ sfx('level'); showBoxes(); $('#lootOut').innerHTML=`<h4>${BOXES[res.b.r].n} geöffnet</h4><div class="lootGrid">${res.items.map((it,i)=>`<div class="lootCard ${it.rare?'rare':''}" style="animation-delay:${i*.12}s">${it.t==='held'?`<canvas data-ico="${it.k}"></canvas>`:it.t==='shop'?`<canvas data-ico="${it.k}"></canvas>`:it.t==='xp'?'<span class="xpIco">EP</span>':'<span class="scrapBig"><i></i></span>'}<b>${it.n}</b><small>${it.d}</small></div>`).join('')}</div>`; drawIcons(); $('#lootOut').scrollIntoView({behavior:'smooth',block:'nearest'}); },900);
+  }));
+}
 function showProfile(){
+  overlay.className='';
   const li=levelInfo(), fp=freePoints(), st=PROF.stats;
   overlay.innerHTML=`<div class="card wide">
     <h2>${rankName(li.L)}</h2>
@@ -1849,6 +2513,7 @@ function showProfile(){
   $('#pBack').addEventListener('click',()=>showMenu());
 }
 function showAch(){
+  overlay.className='';
   const n=ACH.filter(a=>PROF.ach[a[0]]).length;
   overlay.innerHTML=`<div class="card wide">
     <h2>Erfolge</h2><p>${n} von ${ACH.length} geschafft.</p>
@@ -1872,21 +2537,24 @@ const DAILY_MODS=[
 ];
 function dailyFor(date){
   const key=date.getFullYear()*10000+(date.getMonth()+1)*100+date.getDate();
-  const R=rng(key), maps=Object.keys(MAPS), heroes=Object.keys(HEROES);
+  const R=rng(key), maps=Object.keys(MAPS), heroes=FREE_HEROES;
   const mod=DAILY_MODS[Math.floor(R()*DAILY_MODS.length)];
   const d={key:String(key),map:maps[Math.floor(R()*maps.length)],diff:R()<.6?'normal':'schwer',hero:heroes[Math.floor(R()*heroes.length)],mod:mod[0],title:mod[1],desc:mod[2]};
   d.goal=d.mod==='spaet'?45:d.diff==='schwer'?30:40;
-  if(d.mod==='auswahl'){ const pool=KEYS.filter(k=>k!=='held'&&k!=='windrad'); const pickN=[]; while(pickN.length<5){ const k=pool[Math.floor(R()*pool.length)]; if(!pickN.includes(k)) pickN.push(k); } d.only=pickN; d.desc+=' Heute: '+pickN.map(k=>TOWERS[k].n).join(', ')+'.'; }
+  d.kind='daily';
+  ({fast:()=>d.enemySpeed=1.25,reich:()=>d.incomeMul=1.5,arm:()=>d.startMoney=400,spaet:()=>{d.startWave=25;d.startMoney=7000;},ohneheld:()=>d.noHero=true,tank:()=>d.layerHp=1.3,auswahl:()=>{}})[d.mod]();
+  if(d.mod==='auswahl'){ const pool=KEYS.filter(k=>k!=='held'&&k!=='windrad'); const pickN=[]; while(pickN.length<5){ const k=pool[Math.floor(R()*pool.length)]; if(!pickN.includes(k)) pickN.push(k); } d.allow=pickN; d.desc+=' Heute: '+pickN.map(k=>TOWERS[k].n).join(', ')+'.'; }
   return d;
 }
 function showDaily(){
+  overlay.className='';
   const d=dailyFor(new Date()), done=PROF.daily[d.key];
   overlay.innerHTML=`<div class="card">
     <h2>Tagesaufgabe</h2>
     <p><b>${d.title}.</b> ${d.desc}</p>
     <canvas data-map="${d.map}" class="dprev"></canvas>
     <p>Karte: ${MAPS[d.map].n}<br>Schwierigkeit: ${DIFFS[d.diff].n}<br>Held: ${d.mod==='ohneheld'?'keiner':HEROES[d.hero].full}<br>Ziel: Welle ${d.goal} schaffen</p>
-    <p class="small">${done?'Heute schon geschafft. Du kannst trotzdem nochmal spielen.':'Belohnung: 1.500 EP. Morgen gibt es eine neue Aufgabe.'}</p>
+    <p class="small">${done?'Heute schon geschafft. Du kannst trotzdem nochmal spielen.':'Belohnung: 1.500 EP, 20 Kabelreste und eine Kiste. Morgen gibt es eine neue Aufgabe.'}</p>
     <div class="menu row"><button class="second" id="dBack">Zurück</button><button class="primary" id="dGo">Starten</button></div>
   </div>`;
   overlay.querySelectorAll('canvas[data-map]').forEach(cv=>mapPreview(cv,cv.dataset.map));
@@ -1894,51 +2562,56 @@ function showDaily(){
   $('#dGo').addEventListener('click',()=>{ sfx('wave'); startGame(d); });
 }
 function gameOver(){
+  overlay.className='';
   G.running=false; G.build=null; G.sel=null; G.ghost=null;
   const reached=Math.max(0,G.wave-1);
-  if(!DAILY) saveBest(reached);
+  if(!MODE) saveBest(reached);
+  if(M('sandbox',false)){ showMenu(); return; }
   clearSave();
   stat('pops',G.pops||0); G.pops=0; saveProf();
   const best=loadBest();
   sfx('boss');
   overlay.innerHTML=`<div class="card">
     <h2>Netz ausgefallen</h2>
-    <p>Du hast ${reached===1?'1 Welle':fmt(reached)+' Wellen'} abgewehrt (${MAPS[curMap].n}, ${DIFFS[curDiff].n}${DAILY?', Tagesaufgabe':''}).</p>
-    ${DAILY?'':`<div class="best">${reached>=best&&reached>0?'Neuer Bestwert!':'Bestwert: Welle '+best}</div>`}
+    <p>Du hast ${reached===1?'1 Welle':fmt(reached)+' Wellen'} abgewehrt (${MAPS[curMap].n}, ${DIFFS[curDiff].n}${MODE?', Tagesaufgabe':''}).</p>
+    ${MODE?'':`<div class="best">${reached>=best&&reached>0?'Neuer Bestwert!':'Bestwert: Welle '+best}</div>`}
+    ${G.scrapGain?`<p class="gain">+${fmt(G.scrapGain)} Kabelreste verdient</p>`:''}
     <div class="menu"><button class="primary" id="againBtn">Nochmal</button><button class="second" id="toMenu">Menü</button></div>
   </div>`;
   overlay.hidden=false;
-  $('#againBtn').addEventListener('click',()=>startGame(DAILY));
+  $('#againBtn').addEventListener('click',()=>startGame(MODE));
   $('#toMenu').addEventListener('click',()=>showMenu());
 }
-$('#menuBtn').addEventListener('click',()=>{ const ig=G.running; if(ig){ G.paused=true; } showMenu(ig); const c=overlay.querySelector('.menu'); if(G.running&&c){ const b=document.createElement('button'); b.className='primary'; b.textContent='Zurück zum Spiel'; b.addEventListener('click',()=>{ overlay.hidden=true; G.paused=false; }); c.prepend(b); } });
+$('#menuBtn').addEventListener('click',()=>{ if(G.running) G.paused=true; showMenu(G.running); });
 
 /* ---- Speichern ---- */
 const SAVE_KEY='netzschutz3d-save';
 function saveGame(){
-  if(!G.running||DAILY) return;
+  if(!G.running||MODE) return;
   const sw=portrait;
-  const data={v:1,map:curMap,diff:curDiff,hero:curHero,wave:G.wave,money:G.money,lives:G.lives,ultraCd:G.ultraCd,auto:G.auto,
+  const data={v:1,map:curMap,diff:curDiff,hero:curHero,wave:G.wave,money:G.money,lives:G.lives,ultraCd:G.ultraCd,auto:G.auto,won:!!G.won,freeplay:!!G.freeplay,
     abil:Object.fromEntries(Object.entries(G.abil).map(([k,a])=>[k,a.cd])),
-    towers:G.towers.map(t=>({type:t.type,x:sw?t.y:t.x,y:sw?t.x:t.y,lv:t.lv,hlv:t.hlv,xp:t.xp,prio:t.prio,spent:t.spent}))};
+    towers:G.towers.map(t=>({type:t.type,x:sw?t.y:t.x,y:sw?t.x:t.y,sz:t.sz,lv:t.lv,hlv:t.hlv,xp:t.xp,prio:t.prio,spent:t.spent}))};
   try{ localStorage.setItem(SAVE_KEY,JSON.stringify(data)); }catch(e){}
 }
 function loadSave(){ try{ const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null'); return d&&d.v===1&&MAPS[d.map]&&DIFFS[d.diff]&&HEROES[d.hero]?d:null; }catch(e){ return null; } }
 function clearSave(){ try{ localStorage.removeItem(SAVE_KEY); }catch(e){} }
 function continueGame(sv){
-  DAILY=null;
+  overlay.className=''; $('#sandbox').hidden=true;
+  MODE=null;
   curMap=sv.map; curDiff=sv.diff; setHero(sv.hero); pick={map:sv.map,diff:sv.diff,hero:sv.hero};
   newGame(); applyMap(); renderBar();
-  Object.assign(G,{wave:sv.wave,money:sv.money,lives:sv.lives,ultraCd:sv.ultraCd||0,auto:!!sv.auto,running:true});
+  Object.assign(G,{wave:sv.wave,money:sv.money,lives:sv.lives,ultraCd:sv.ultraCd||0,auto:!!sv.auto,won:!!sv.won,freeplay:!!sv.freeplay,running:true});
   for(const o of sv.towers){
     const x=portrait?o.y:o.x, y=portrait?o.x:o.y;
     if(!TOWERS[o.type]||!canBuild(x,y)) continue;
-    const t={id:uid++,type:o.type,x,y,lv:o.lv||[0,0],spent:o.spent||0,cd:0,prio:o.prio||'first'};
+    if(o.sz&&(!canBuild(x+1,y)||!canBuild(x,y+1)||!canBuild(x+1,y+1))) continue;
+    const t={id:uid++,type:o.type,x,y,sz:o.sz,lv:o.lv||[0,0],spent:o.spent||0,cd:0,prio:o.prio||'first'};
     if(o.type==='held'){ t.hlv=o.hlv||1; t.xp=o.xp||0; G.hero=t; }
     G.towers.push(t); addTowerMesh(t);
   }
   recalc();
-  for(const t of G.towers) if(t.type!=='held'&&Math.max(t.lv[0],t.lv[1])>=4) G.abil[t.type]={cd:(sv.abil&&sv.abil[t.type])||0};
+  for(const t of G.towers) if(t.type!=='held'&&(Math.max(t.lv[0],t.lv[1])>=4||t.type==='akw')) G.abil[t.type]={cd:(sv.abil&&sv.abil[t.type])||0};
   overlay.hidden=true; G.autoT=1.5;
   toast(`Weiter geht’s mit Welle ${G.wave+1}`);
 }
@@ -1955,6 +2628,7 @@ async function submitScore(w){
   }catch(e){}
 }
 async function showBoard(){
+  overlay.className='';
   overlay.innerHTML=`<div class="card"><h2>Bestenliste</h2><div id="boardList" class="board"><p>Wird geladen …</p></div><button class="primary" id="bBack">Zurück</button></div>`;
   $('#bBack').addEventListener('click',()=>showMenu());
   const el=$('#boardList');
@@ -1995,6 +2669,7 @@ matchMedia('(prefers-color-scheme: dark)').addEventListener('change',readColors)
 new MutationObserver(readColors).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
 setHero(curHero);
 newGame();
+initSandboxPanel();
 readColors();
 setupMap();
 renderBar();
